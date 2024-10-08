@@ -1,27 +1,10 @@
+.header, .footer {
+    background-color:rgb(179, 206, 234);
+    color: rgb(21, 11, 0);
+    padding: 10px;
+    font-size: 12px;
+}
+
 .container {
-    position: relative;
-}
-
-.header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
     padding: 10px;
-    font-size: 12px;
-    background-color: rgb(0, 115, 62);
-    color: rgb(249, 250, 244);
-    height: 100px;
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(0, 115, 62);
-    font-size: 12px;
-    color: rgb(249, 250, 244);
-    padding: 10px;
-    height: 100px;
 }
