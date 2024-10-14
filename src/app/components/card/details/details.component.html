@@ -1,6 +1,11 @@
-<div class="card-image">
-    <ct-image></ct-image>
-</div>
-<div class="card-informations">
-    <ct-text></ct-text>
+<div class="flex-container text">
+    <div class="flex-child">
+        <ct-text [card]="currentCard"></ct-text>
+    </div>
+    <div class="flex-child image">
+        <ct-image></ct-image>
+    </div>
+    <div class="flex-child sets">
+        <ct-sets [card]="currentCard"></ct-sets>
+    </div>
 </div>

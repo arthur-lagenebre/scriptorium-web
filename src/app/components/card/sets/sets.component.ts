@@ -2,12 +2,12 @@ import { Component, Input } from '@angular/core';
 import { Card } from '../card';
 
 @Component({
-  selector: 'ct-text',
+  selector: 'ct-sets',
   standalone: true,
   imports: [],
-  templateUrl: './text.component.html',
-  styleUrl: './text.component.scss'
+  templateUrl: './sets.component.html',
+  styleUrl: './sets.component.scss'
 })
-export class TextComponent {
+export class SetsComponent {
   @Input() card: Card | undefined;
 }
