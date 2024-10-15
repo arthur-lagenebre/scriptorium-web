@@ -10,4 +10,5 @@ import { Card } from '../card';
 })
 export class SetsComponent {
   @Input() card: Card | undefined;
+  @Input() language: string = "";
 }

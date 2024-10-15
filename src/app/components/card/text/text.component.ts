@@ -10,4 +10,5 @@ import { Card } from '../card';
 })
 export class TextComponent {
   @Input() card: Card | undefined;
+  @Input() language: string = "";
 }
