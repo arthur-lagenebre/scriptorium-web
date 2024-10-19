@@ -1,1 +1,31 @@
-<p>card-list works!</p>
+<div>
+    <div>
+      {{pageTitle}}
+    </div>
+    <div>
+      <div>
+        <table *ngIf='cards.length'>
+          <thead>
+            <tr>
+              <th>Oracle Id</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let card of cards'>
+              <td>
+                <a [routerLink]="['/details', card.OracleId]">
+                  {{ card.OracleId }}
+                </a>
+              </td>
+              <td>{{ GetValue(card.Names) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div *ngIf='errorMessage'
+       class='alert alert-danger'>
+    Error: {{ errorMessage }}
+  </div>

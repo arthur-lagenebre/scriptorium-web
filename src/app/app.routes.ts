@@ -12,6 +12,10 @@ export const routes: Routes = [
         resolve: { card: cardResolver }
     },
     {
+        path: "card-list",
+        loadComponent: () => import('./components/card-list/card-list.component').then(c => c.CardListComponent),
+    },
+    {
         path: "about",
         loadComponent: () => import('./components/about/about.component').then(c => c.AboutComponent),
     },
