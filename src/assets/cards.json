@@ -52,6 +52,9 @@
         ]
       }
     ],
+    "Languages": [
+      "en"
+    ],
     "CardFaces": [],
     "RelatedCards": [],
     "Power": null,
@@ -97,6 +100,9 @@
           }
         ]
       }
+    ],
+    "Languages": [
+      "en"
     ],
     "CardFaces": [],
     "RelatedCards": [],
@@ -144,6 +150,9 @@
         ]
       }
     ],
+    "Languages": [
+      "en"
+    ],
     "CardFaces": [],
     "RelatedCards": [],
     "Power": "2",
@@ -190,6 +199,9 @@
         ]
       }
     ],
+    "Languages": [
+      "fr"
+    ],
     "CardFaces": [],
     "RelatedCards": [],
     "Power": "4",
@@ -235,6 +247,9 @@
           }
         ]
       }
+    ],
+    "Languages": [
+      "en"
     ],
     "CardFaces": [],
     "RelatedCards": [
@@ -370,6 +385,10 @@
         ]
       }
     ],
+    "Languages": [
+      "en",
+      "fr"
+    ],
     "CardFaces": [],
     "RelatedCards": [],
     "Power": null,
@@ -400,6 +419,9 @@
           }
         ]
       }
+    ],
+    "Languages": [
+      "en"
     ],
     "CardFaces": [
       {

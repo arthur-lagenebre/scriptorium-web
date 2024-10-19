@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Card } from '../components/card/card';
+import { Card } from '../models/card';
 import { catchError, map, Observable, tap, throwError } from 'rxjs';
 
 @Injectable({

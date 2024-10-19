@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Card, Language, Sett } from '../card';
+import { Card } from '../../../models/card';
+import { Sett } from "../../../models/Sett";
+import { Language } from "../../../models/Language";
 import { Observable } from 'rxjs';
 
 @Component({
