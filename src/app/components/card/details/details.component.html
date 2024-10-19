@@ -1,11 +1,11 @@
 <div class="flex-container text">
     <div class="flex-child image">
-        <ct-image></ct-image>
+        <ct-image [card$]="currentCard$"></ct-image>
     </div>
     <div class="flex-child">
-        <ct-text [card]="currentCard" [language]="currentLanguage"></ct-text>
+        <ct-text [card$]="currentCard$" [language]="currentLanguage"></ct-text>
     </div>
     <div class="flex-child sets">
-        <ct-sets [card]="currentCard" [language]="currentLanguage"></ct-sets>
+        <ct-sets [card$]="currentCard$" [language]="currentLanguage"></ct-sets>
     </div>
 </div>

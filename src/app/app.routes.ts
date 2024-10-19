@@ -1,13 +1,19 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { DetailsComponent } from './components/card/details/details.component';
+import { DetailsGuard } from './components/card/details/details.guard';
+import { cardResolver } from './resolvers/cardResolver';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
-    // {
-    //     path: "details/:id",
-    //     loadComponent: () => import('./components/card/details/details.component').then(c => c.DetailsComponent),
-    // },
-    { path: 'details/:id', component: DetailsComponent},
+    {
+        path: "details/:id",
+        loadComponent: () => import('./components/card/details/details.component').then(c => c.DetailsComponent),
+        canActivate: [DetailsGuard],
+        resolve: { card: cardResolver }
+    },
+    {
+        path: "about",
+        loadComponent: () => import('./components/about/about.component').then(c => c.AboutComponent),
+    },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

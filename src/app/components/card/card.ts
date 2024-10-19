@@ -2,9 +2,9 @@ export interface Card {
     OracleId: string
     Names: Language[]
     Typelines: Language[]
-    Texts: Text[]
+    Texts: Language[]
     ManaCost: string
-    Sets: Set[]
+    Sets: Sett[]
     CardFaces: CardFace[]
     RelatedCards: RelatedCard[]
     Power?: string
@@ -15,14 +15,16 @@ export interface Card {
 }
 
 export interface Language {
-    Language: string;
+    Code: string;
     Value: string;
 }
 
-export interface Set {
+export interface Sett {
     Name: string
+    Order: number
     CollectorNumber: string
     Rarity: string
+    ImageUrl: string
     Flavors: Flavor[]
 }
 

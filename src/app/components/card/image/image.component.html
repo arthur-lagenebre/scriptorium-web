@@ -1,6 +1,8 @@
+@if (card$ | async; as card) {
 <div>
     <img class="card-image"
-      title="Acrobatic Cheerleader (Duskmourn: House of Horror #1)"
-      alt="Acrobatic Cheerleader (Duskmourn: House of Horror #1)"
-      src="https://cards.scryfall.io/large/front/6/f/6f1a7590-3eee-4803-b192-d4fb771e6a86.jpg?1726285858">
+      title="{{GetCardName(card.Names)}}"
+      alt="{{GetCardName(card.Names)}}"
+      src="{{GetImageUrl(card.Sets)}}">
 </div>
+}

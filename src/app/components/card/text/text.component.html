@@ -1,21 +1,17 @@
+@if (card$ | async; as card) {
 <div>
-    <h1 lang="en">
-      <span>{{card?.OracleId}}</span>
-      <span>{{language}}</span>
-      <span>Acrobatic Cheerleader</span>
-      <!-- <span class="card-text-mana-cost"><abbr class="card-symbol card-symbol-1" title="one generic mana">{1}</abbr><abbr class="card-symbol card-symbol-W" title="one white mana">{W}</abbr></span> -->
-    </h1>
-    <p lang="en">Creature — Human Survivor</p>
-    <div>
-      <div>
-        <p><i>Survival</i> — At the beginning of your second main phase, if Acrobatic Cheerleader is tapped, put a flying counter on it. This ability triggers only once.</p>
-      </div>
-      <div>
-        <p>“I used to cheat death every day in practice. This is nothing.”</p>
-      </div>
+  <h1 lang="{{language}}">
+    <span>{{GetValue(card.Names)}}</span>
+    <!-- <span class="card-text-mana-cost"><abbr class="card-symbol card-symbol-1" title="one generic mana">{1}</abbr><abbr class="card-symbol card-symbol-W" title="one white mana">{W}</abbr></span> -->
+  </h1>
+  <p lang="{{language}}">{{GetValue(card.Typelines)}}</p>
+  <div>
+    <div [innerHTML]="GetText(card.Texts)">
     </div>
-    <div>
-      2/2
-    </div>
-    <p>Illustrated by Julia Metzger</p>
+  </div>
+  <div *ngIf='card.Power'>
+    <span>{{card.Power}}/{{card.Toughness}}</span>
+  </div>
+    <p>Illustrated by {{GetArtist(card.Sets)}}</p>
 </div>
+}

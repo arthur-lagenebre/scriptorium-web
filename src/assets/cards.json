@@ -1,453 +1,469 @@
 [
-    {
-      "OracleId": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
-      "Names": [
-        {
-          "Language": "en",
-          "Value": "Forest"
-        }
-      ],
-      "Typelines": [
-        {
-          "Language": "en",
-          "Value": "Basic Land — Forest"
-        }
-      ],
-      "Texts": [
-        {
-          "Language": "en",
-          "Value": "({T}: Add {G}.)"
-        }
-      ],
-      "ManaCost": "",
-      "Sets": [
-        {
-          "Name": "Bloomburrow",
-          "CollectorNumber": "280",
-          "Rarity": "common",
-          "Flavors": [
-            {
-              "FaceId": 0,
-              "Artist": "David Robert Hovey",
-              "FlavorText": "",
-              "FlavorName": ""
-            }
-          ]
-        },
-        {
-            "Name": "Murders at Karlov Manor",
-            "CollectorNumber": "276",
-            "Rarity": "common",
-            "Flavors": [
-              {
-                "FaceId": 0,
-                "Artist": "Mia Boas",
-                "FlavorText": "",
-                "FlavorName": ""
-              }
-            ]
+  {
+    "OracleId": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Forest"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Basic Land — Forest"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "({T}: Add {G}.)"
+      }
+    ],
+    "ManaCost": "",
+    "Sets": [
+      {
+        "Name": "Bloomburrow",
+        "Order": 1,
+        "CollectorNumber": "280",
+        "Rarity": "Common",
+        "ImageUrl": "https://cards.scryfall.io/large/front/0/0/0000419b-0bba-4488-8f7a-6194544ce91e.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "David Robert Hovey",
+            "FlavorText": "",
+            "FlavorName": ""
           }
-      ],
-      "CardFaces": [],
-      "RelatedCards": [],
-      "Power": null,
-      "Toughness": null,
-      "Loyalty": null,
-      "HandModifier": null,
-      "LifeModifier": null
-    },
-    {
-      "OracleId": "44623693-51d6-49ad-8cd7-140505caf02f",
-      "Names": [
-        {
-          "Language": "en",
-          "Value": "Fury Sliver"
-        }
-      ],
-      "Typelines": [
-        {
-          "Language": "en",
-          "Value": "Creature — Sliver"
-        }
-      ],
-      "Texts": [
-        {
-          "Language": "en",
-          "Value": "All Sliver creatures have double strike."
-        }
-      ],
-      "ManaCost": "{5}{R}",
-      "Sets": [
-        {
-          "Name": "Time Spiral",
-          "CollectorNumber": "157",
-          "Rarity": "uncommon",
-          "Flavors": [
-            {
-              "FaceId": 0,
-              "Artist": "Paolo Parente",
-              "FlavorText": "\"A rift opened, and our arrows were abruptly stilled. To move was to push the world. But the sliver's claw still twitched, red wounds appeared in Thed's chest, and ribbons of blood hung in the air.\"\n—Adom Capashen, Benalish hero",
-              "FlavorName": ""
-            }
-          ]
-        }
-      ],
-      "CardFaces": [],
-      "RelatedCards": [],
-      "Power": "3",
-      "Toughness": "3",
-      "Loyalty": null,
-      "HandModifier": null,
-      "LifeModifier": null
-    },
-    {
-      "OracleId": "8ae3562f-28b7-4462-96ed-be0cf7052ccc",
-      "Names": [
-        {
-          "Language": "en",
-          "Value": "Kor Outfitter"
-        }
-      ],
-      "Typelines": [
-        {
-          "Language": "en",
-          "Value": "Creature — Kor Soldier"
-        }
-      ],
-      "Texts": [
-        {
-          "Language": "en",
-          "Value": "When Kor Outfitter enters, you may attach target Equipment you control to target creature you control."
-        }
-      ],
-      "ManaCost": "{W}{W}",
-      "Sets": [
-        {
-          "Name": "Zendikar",
-          "CollectorNumber": "21",
-          "Rarity": "common",
-          "Flavors": [
-            {
-              "FaceId": 0,
-              "Artist": "Kieran Yanner",
-              "FlavorText": "\"We take only what we need to survive. Believe me, you will need this.\"",
-              "FlavorName": ""
-            }
-          ]
-        }
-      ],
-      "CardFaces": [],
-      "RelatedCards": [],
-      "Power": "2",
-      "Toughness": "2",
-      "Loyalty": null,
-      "HandModifier": null,
-      "LifeModifier": null
-    },
-    {
-      "OracleId": "30cd69a8-7893-4075-94ca-04450ff821d3",
-      "Names": [
-        {
-          "Language": "fr",
-          "Value": "Esprit du foyer"
-        }
-      ],
-      "Typelines": [
-        {
-          "Language": "fr",
-          "Value": "Creature : chat et esprit"
-        }
-      ],
-      "Texts": [
-        {
-          "Language": "fr",
-          "Value": "Vol\nVous avez la défense talismanique. (Vous ne pouvez pas être la cible de sorts ou de capacités que vos adversaires contrôlent.)"
-        }
-      ],
-      "ManaCost": "{4}{W}{W}",
-      "Sets": [
-        {
-          "Name": "Commander 2017",
-          "CollectorNumber": "73",
-          "Rarity": "rare",
-          "Flavors": [
-            {
-              "FaceId": 0,
-              "Artist": "Jason Chan",
-              "FlavorText": "Les voleurs savent qu'un grognement dans la nuit signifie, « Allez cambrioler autre part. »",
-              "FlavorName": ""
-            }
-          ]
-        }
-      ],
-      "CardFaces": [],
-      "RelatedCards": [],
-      "Power": "4",
-      "Toughness": "5",
-      "Loyalty": null,
-      "HandModifier": null,
-      "LifeModifier": null
-    },
-    {
-      "OracleId": "dc4e2134-f0c2-49aa-9ea3-ebf83af1445c",
-      "Names": [
-        {
-          "Language": "en",
-          "Value": "Spirit"
-        }
-      ],
-      "Typelines": [
-        {
-          "Language": "en",
-          "Value": "Token Creature — Spirit"
-        }
-      ],
-      "Texts": [
-        {
-          "Language": "en",
-          "Value": "Flying"
-        }
-      ],
-      "ManaCost": "",
-      "Sets": [
-        {
-          "Name": "Modern Masters 2015 Tokens",
-          "CollectorNumber": "5",
-          "Rarity": "common",
-          "Flavors": [
-            {
-              "FaceId": 0,
-              "Artist": "Mike Sass",
-              "FlavorText": "",
-              "FlavorName": ""
-            }
-          ]
-        }
-      ],
-      "CardFaces": [],
-      "RelatedCards": [
-        {
-          "Component": "ComboPiece",
-          "Name": "Funeral Pyre",
-          "TypeLine": "Instant"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Haunted Dead",
-          "TypeLine": "Creature — Zombie"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Blessed Defiance",
-          "TypeLine": "Instant"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Slayer's Plate",
-          "TypeLine": "Artifact — Equipment"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Lingering Souls",
-          "TypeLine": "Sorcery"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Staff of the Storyteller",
-          "TypeLine": "Artifact"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Gallows at Willow Hill",
-          "TypeLine": "Artifact"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Kaya the Inexorable",
-          "TypeLine": "Legendary Planeswalker — Kaya"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Nearheath Chaplain",
-          "TypeLine": "Creature — Human Cleric"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Oath of the Grey Host",
-          "TypeLine": "Enchantment — Saga"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Ethereal Investigator",
-          "TypeLine": "Creature — Spirit"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Whispering Wizard",
-          "TypeLine": "Creature — Human Wizard"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Spectral Procession",
-          "TypeLine": "Sorcery"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Abzan Ascendancy",
-          "TypeLine": "Enchantment"
-        },
-        {
-          "Component": "ComboPiece",
-          "Name": "Benevolent Offering",
-          "TypeLine": "Instant"
-        }
-      ],
-      "Power": "1",
-      "Toughness": "1",
-      "Loyalty": null,
-      "HandModifier": null,
-      "LifeModifier": null
-    },
-    {
-      "OracleId": "5aa12aff-db3c-4be5-822b-3afdf536b33e",
-      "Names": [
-        {
-          "Language": "en",
-          "Value": "Web"
-        },
-        {
-          "Language": "fr",
-          "Value": "Tisseur de toile"
-        }
-      ],
-      "Typelines": [
-        {
-          "Language": "en",
-          "Value": "Enchantment — Aura"
-        },
-        {
-          "Language": "fr",
-          "Value": "Enchantement : aura"
-        }
-      ],
-      "Texts": [
-        {
-          "Language": "en",
-          "Value": "Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature gets +0/+2 and has reach. (It can block creatures with flying.)"
-        },
-        {
-          "Language": "fr",
-          "Value": "Enchanter : créature (Ciblez une créature au moment où vous jouez cette carte. Cette carte arrive en jeu attachée à cette créature.)\nLa créature enchantée gagne +0/+2 et elle peut bloquer comme si elle avait le vol."
-        }
-      ],
-      "ManaCost": "{G}",
-      "Sets": [
-        {
-          "Name": "Revised Edition",
-          "CollectorNumber": "229",
-          "Rarity": "rare",
-          "Flavors": [
-            {
-              "FaceId": 0,
-              "Artist": "Rob Alexander",
-              "FlavorText": "",
-              "FlavorName": ""
-            }
-          ]
-        }
-      ],
-      "CardFaces": [],
-      "RelatedCards": [],
-      "Power": null,
-      "Toughness": null,
-      "Loyalty": null,
-      "HandModifier": null,
-      "LifeModifier": null
-    },
-    {
-      "OracleId": "396b088d-f9af-4ee1-843f-dbe1633f9cc8",
-      "Names": [],
-      "Typelines": [],
-      "Texts": [],
-      "ManaCost": "{4}{U} // {1}{U}",
-      "Sets": [
-        {
-          "Name": "Wilds of Eldraine",
-          "CollectorNumber": "63",
-          "Rarity": "common",
-          "Flavors": [
-            {
-              "FaceId": 0,
-              "Artist": "Andreas Zafiratos",
-              "FlavorText": "Obyra's devoted servants shrieked as their sleeping mistress slashed at them, unseeing.",
-              "FlavorName": ""
-            }
-          ]
-        }
-      ],
-      "CardFaces": [
-        {
-          "FaceId": 0,
-          "ManaCost": "{4}{U}",
-          "Names": [
-            {
-              "Language": "en",
-              "Value": "Obyra's Attendants"
-            }
-          ],
-          "TypeLines": [
-            {
-              "Language": "en",
-              "Value": "Creature — Faerie Wizard"
-            }
-          ],
-          "Texts": [
-            {
-              "Language": "en",
-              "Value": "Flying"
-            }
-          ],
-          "Power": "3",
-          "Toughness": "4",
-          "Loyalty": null,
-          "Defense": null
-        },
-        {
-          "FaceId": 1,
-          "ManaCost": "{1}{U}",
-          "Names": [
-            {
-              "Language": "en",
-              "Value": "Desperate Parry"
-            }
-          ],
-          "TypeLines": [
-            {
-              "Language": "en",
-              "Value": "Instant — Adventure"
-            }
-          ],
-          "Texts": [{
-            "Language": "en",
-            "Value": "Target creature gets -4/-0 until end of turn. (Then exile this card. You may cast the creature later from exile.)"
-          }],
-          "Power": null,
-          "Toughness": null,
-          "Loyalty": null,
-          "Defense": null
-        }
-      ],
-      "RelatedCards": [
-        {
-          "Component": "ComboPiece",
-          "Name": "On an Adventure",
-          "TypeLine": "Card"
-        }
-      ],
-      "Power": null,
-      "Toughness": null,
-      "Loyalty": null,
-      "HandModifier": null,
-      "LifeModifier": null
-    }
+        ]
+      },
+      {
+        "Name": "Murders at Karlov Manor",
+        "Order": 2,
+        "CollectorNumber": "276",
+        "Rarity": "Common",
+        "ImageUrl": "https://cards.scryfall.io/large/front/8/1/8126b842-ea58-4988-8b3f-0394cf766b91.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Mia Boas",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "44623693-51d6-49ad-8cd7-140505caf02f",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Fury Sliver"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Creature — Sliver"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "All Sliver creatures have double strike."
+      }
+    ],
+    "ManaCost": "{5}{R}",
+    "Sets": [
+      {
+        "Name": "Time Spiral",
+        "Order": 1,
+        "CollectorNumber": "157",
+        "Rarity": "Uncommon",
+        "ImageUrl": "https://cards.scryfall.io/large/front/a/8/a8a64329-09fc-4e0d-b7d1-378635f2801a.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Paolo Parente",
+            "FlavorText": "\"A rift opened, and our arrows were abruptly stilled. To move was to push the world. But the sliver's claw still twitched, red wounds appeared in Thed's chest, and ribbons of blood hung in the air.\"\n—Adom Capashen, Benalish hero",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": "3",
+    "Toughness": "3",
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "8ae3562f-28b7-4462-96ed-be0cf7052ccc",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Kor Outfitter"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Creature — Kor Soldier"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "When Kor Outfitter enters, you may attach target Equipment you control to target creature you control."
+      }
+    ],
+    "ManaCost": "{W}{W}",
+    "Sets": [
+      {
+        "Name": "Zendikar",
+        "Order": 1,
+        "CollectorNumber": "21",
+        "Rarity": "Common",
+        "ImageUrl": "https://cards.scryfall.io/large/front/0/0/00006596-1166-4a79-8443-ca9f82e6db4e.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Kieran Yanner",
+            "FlavorText": "\"We take only what we need to survive. Believe me, you will need this.\"",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": "2",
+    "Toughness": "2",
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "30cd69a8-7893-4075-94ca-04450ff821d3",
+    "Names": [
+      {
+        "Code": "fr",
+        "Value": "Esprit du foyer"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "fr",
+        "Value": "Creature : chat et esprit"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "fr",
+        "Value": "Vol\nVous avez la défense talismanique. (Vous ne pouvez pas être la cible de sorts ou de capacités que vos adversaires contrôlent.)"
+      }
+    ],
+    "ManaCost": "{4}{W}{W}",
+    "Sets": [
+      {
+        "Name": "Commander 2017",
+        "Order": 1,
+        "CollectorNumber": "73",
+        "Rarity": "Rare",
+        "ImageUrl": "https://cards.scryfall.io/large/front/9/3/93fb7e08-ff15-49b9-bed8-0faadfa8338f.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Jason Chan",
+            "FlavorText": "Les voleurs savent qu'un grognement dans la nuit signifie, « Allez cambrioler autre part. »",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": "4",
+    "Toughness": "5",
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "dc4e2134-f0c2-49aa-9ea3-ebf83af1445c",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Spirit"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Token Creature — Spirit"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "Flying"
+      }
+    ],
+    "ManaCost": "",
+    "Sets": [
+      {
+        "Name": "Modern Masters 2015 Tokens",
+        "Order": 1,
+        "CollectorNumber": "5",
+        "Rarity": "Common",
+        "ImageUrl": "https://cards.scryfall.io/large/front/7/e/7ebb3b03-943e-4b5a-be04-f59316b81333.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Mike Sass",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [],
+    "RelatedCards": [
+      {
+        "Component": "ComboPiece",
+        "Name": "Funeral Pyre",
+        "TypeLine": "Instant"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Haunted Dead",
+        "TypeLine": "Creature — Zombie"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Blessed Defiance",
+        "TypeLine": "Instant"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Slayer's Plate",
+        "TypeLine": "Artifact — Equipment"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Lingering Souls",
+        "TypeLine": "Sorcery"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Staff of the Storyteller",
+        "TypeLine": "Artifact"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Gallows at Willow Hill",
+        "TypeLine": "Artifact"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Kaya the Inexorable",
+        "TypeLine": "Legendary Planeswalker — Kaya"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Nearheath Chaplain",
+        "TypeLine": "Creature — Human Cleric"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Oath of the Grey Host",
+        "TypeLine": "Enchantment — Saga"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Ethereal Investigator",
+        "TypeLine": "Creature — Spirit"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Whispering Wizard",
+        "TypeLine": "Creature — Human Wizard"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Spectral Procession",
+        "TypeLine": "Sorcery"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Abzan Ascendancy",
+        "TypeLine": "Enchantment"
+      },
+      {
+        "Component": "ComboPiece",
+        "Name": "Benevolent Offering",
+        "TypeLine": "Instant"
+      }
+    ],
+    "Power": "1",
+    "Toughness": "1",
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "5aa12aff-db3c-4be5-822b-3afdf536b33e",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Web"
+      },
+      {
+        "Code": "fr",
+        "Value": "Tisseur de toile"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Enchantment — Aura"
+      },
+      {
+        "Code": "fr",
+        "Value": "Enchantement : aura"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "Enchant creature\nEnchanted creature gets +0/+2 and has reach."
+      },
+      {
+        "Code": "fr",
+        "Value": "Enchanter : créature\nLa créature enchantée gagne +0/+2 et elle peut bloquer comme si elle avait le vol."
+      }
+    ],
+    "ManaCost": "{G}",
+    "Sets": [
+      {
+        "Name": "Revised Edition",
+        "Order": 1,
+        "CollectorNumber": "229",
+        "Rarity": "Rare",
+        "ImageUrl": "https://cards.scryfall.io/large/front/0/0/00012bd8-ed68-4978-a22d-f450c8a6e048.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Rob Alexander",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "396b088d-f9af-4ee1-843f-dbe1633f9cc8",
+    "Names": [],
+    "Typelines": [],
+    "Texts": [],
+    "ManaCost": "{4}{U} // {1}{U}",
+    "Sets": [
+      {
+        "Name": "Wilds of Eldraine",
+        "Order": 1,
+        "CollectorNumber": "63",
+        "Rarity": "Common",
+        "ImageUrl": "https://cards.scryfall.io/large/front/0/0/0001e77a-7fff-49d2-a55c-42f6fdf6db08.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Andreas Zafiratos",
+            "FlavorText": "Obyra's devoted servants shrieked as their sleeping mistress slashed at them, unseeing.",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [
+      {
+        "FaceId": 0,
+        "ManaCost": "{4}{U}",
+        "Names": [
+          {
+            "Code": "en",
+            "Value": "Obyra's Attendants"
+          }
+        ],
+        "TypeLines": [
+          {
+            "Code": "en",
+            "Value": "Creature — Faerie Wizard"
+          }
+        ],
+        "Texts": [
+          {
+            "Code": "en",
+            "Value": "Flying"
+          }
+        ],
+        "Power": "3",
+        "Toughness": "4",
+        "Loyalty": null,
+        "Defense": null
+      },
+      {
+        "FaceId": 1,
+        "ManaCost": "{1}{U}",
+        "Names": [
+          {
+            "Code": "en",
+            "Value": "Desperate Parry"
+          }
+        ],
+        "TypeLines": [
+          {
+            "Code": "en",
+            "Value": "Instant — Adventure"
+          }
+        ],
+        "Texts": [{
+          "Code": "en",
+          "Value": "Target creature gets -4/-0 until end of turn. (Then exile this card. You may cast the creature later from exile.)"
+        }],
+        "Power": null,
+        "Toughness": null,
+        "Loyalty": null,
+        "Defense": null
+      }
+    ],
+    "RelatedCards": [
+      {
+        "Component": "ComboPiece",
+        "Name": "On an Adventure",
+        "TypeLine": "Card"
+      }
+    ],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  }
 ]

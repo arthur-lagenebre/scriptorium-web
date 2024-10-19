@@ -12,18 +12,12 @@ export class CardService {
   constructor(private http: HttpClient) { }
 
   getCards(): Observable<Card[]> {
-      return this.http.get<Card[]>(this.cardUrl)
-        .pipe(
-          tap(data => console.log('All: ', JSON.stringify(data))),
-          catchError(this.handleError)
-        );
+      return this.http.get<Card[]>(this.cardUrl);
   }
 
-  getCard(oracleId: string): Observable<Card | undefined> {
+  getCard(oracleId: string | null): Observable<Card | undefined> {
       return this.getCards()
-        .pipe(
-          map((cards: Card[]) => cards.find(x => x.OracleId === oracleId))
-        );
+                 .pipe(map((cards: Card[]) => cards.find(x => x.OracleId === oracleId)));
   }
 
   private handleError(err: HttpErrorResponse): Observable<never> {

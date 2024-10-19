@@ -1,38 +1,33 @@
+@if (card$ |async; as card) {
 <div>
-    <span>{{card?.OracleId}}</span>
-</div>
-<div>
-    <span>{{language}}</span>
-</div>
-<div>
-    <span>#88 · Rare · English · Nonfoil<br/></span>
+    <span>#{{GetCollectionNumber(card.Sets)}} · {{GetRarity(card.Sets)}} · {{language}}<br/></span>
 </div>
 <table>
     <thead>
         <tr>
-            <th>Prints</th>
+            <th><span>Prints</span></th>
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor='let set of card.Sets' [class.current]="set.Order === 1">
             <td>
-                <a href="/card/td0/A35/all-hallows-eve">Magic Online Theme Decks</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/card/me3/57/all-hallows-eve">Masters Edition III</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/card/olep/42/all-hallows-eve">Oversized League Prizes</a>
-            </td>
-        </tr>
-        <tr class="current">
-            <td>
-                <a href="/card/leg/88/all-hallows-eve">Legends</a>
+                {{set.Name}}
             </td>
         </tr>
     </tbody>
 </table>
+<table *ngIf="card.RelatedCards.length > 0">
+    <thead>
+        <tr>
+            <th><span>Faces, Tokens, &amp; Other Parts</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let relatedCard of card.RelatedCards">
+          <td>
+            {{relatedCard.Name}}
+          </td>
+        </tr>
+    </tbody>
+</table>
+}
