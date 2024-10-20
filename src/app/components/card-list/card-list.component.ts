@@ -5,6 +5,7 @@ import { Card } from "../../models/card";
 import { CardService } from "../../services/card.service";
 import { RouterLink } from "@angular/router";
 import { Language } from "../../models/Language";
+import { Sett } from "../../models/Sett";
 
 @Component({
   selector: 'ct-card-list',
@@ -21,14 +22,19 @@ export class CardListComponent {
 
   constructor(private cardService: CardService) {}
 
-  GetValue(Languages: Language[]) {
-    return Languages[0].Value;
+  GetCardName(card: Card) {
+    return card.Names.length ? card.Names[0].Value : card.CardFaces[0].Names[0].Value;
+  }  
+
+  GetImageUrl(Sets: Sett[]) {
+    return Sets.find(x => x.Order === 1)?.ImageUrl;
   }
   
   ngOnInit(): void {
     this.sub = this.cardService.getCards().subscribe({
       next: cards => {
         this.cards = cards;
+        console.log(cards);
       },
       error: err => this.errorMessage = err
     });

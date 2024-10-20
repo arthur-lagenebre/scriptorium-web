@@ -2,11 +2,9 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    border: 2px solid red;
 }
 
 .flex-child {
-    border: 2px solid yellow;
     flex: 1;
     max-width: 338px;
 }

@@ -5,11 +5,12 @@ import { SetsComponent } from "../sets/sets.component";
 import { Card } from '../../../models/card';
 import { ActivatedRoute } from '@angular/router';
 import { map, Observable } from 'rxjs';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'ct-details',
   standalone: true,
-  imports: [ImageComponent, TextComponent, SetsComponent],
+  imports: [ImageComponent, TextComponent, SetsComponent, RouterLink],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })

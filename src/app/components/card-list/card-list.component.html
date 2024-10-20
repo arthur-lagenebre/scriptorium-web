@@ -1,31 +1,12 @@
 <div>
-    <div>
-      {{pageTitle}}
-    </div>
-    <div>
-      <div>
-        <table *ngIf='cards.length'>
-          <thead>
-            <tr>
-              <th>Oracle Id</th>
-              <th>Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor='let card of cards'>
-              <td>
-                <a [routerLink]="['/details', card.OracleId]">
-                  {{ card.OracleId }}
-                </a>
-              </td>
-              <td>{{ GetValue(card.Names) }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <div class="flex-container">
+    <div *ngFor='let card of cards' class="flex-child">
+      <a [routerLink]="['/details', card.OracleId]">
+        <img class="card-image" title="{{GetCardName(card)}}" alt="{{GetCardName(card)}}" src="{{GetImageUrl(card.Sets)}}">
+      </a>
     </div>
   </div>
-  <div *ngIf='errorMessage'
-       class='alert alert-danger'>
-    Error: {{ errorMessage }}
-  </div>
+</div>
+<div *ngIf='errorMessage' class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>

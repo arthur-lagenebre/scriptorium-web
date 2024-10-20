@@ -465,10 +465,12 @@
             "Value": "Instant — Adventure"
           }
         ],
-        "Texts": [{
-          "Code": "en",
-          "Value": "Target creature gets -4/-0 until end of turn. (Then exile this card. You may cast the creature later from exile.)"
-        }],
+        "Texts": [
+          {
+            "Code": "en",
+            "Value": "Target creature gets -4/-0 until end of turn. (Then exile this card. You may cast the creature later from exile.)"
+          }
+        ],
         "Power": null,
         "Toughness": null,
         "Loyalty": null,
@@ -487,5 +489,52 @@
     "Loyalty": null,
     "HandModifier": null,
     "LifeModifier": null
+  },
+  {
+    "OracleId": "f3658894-3d3d-4cd4-b0ac-c53e1d08747c",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Stalking Stones"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Land"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "{T}: Add {C}.\n{6}: Stalking Stones becomes a 3/3 Elemental artifact creature that's still a land. (This effect lasts indefinitely.)"
+      }
+    ],
+    "Manacost": "",
+    "Sets": [
+      {
+        "Name": "World Championship Decks 1998",
+        "Order": 1,
+        "CollectorNumber": "rb327",
+        "Rarity": "Uncommon",
+        "ImageUrl": "https://cards.scryfall.io/large/front/3/b/3bc700c1-7c01-4945-a4f2-0eaa67797168.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Stephen Daniele",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "Languages": [
+      "en"
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Creature": null,
+    "Planeswalker": null,
+    "Vanguard": null
   }
 ]
