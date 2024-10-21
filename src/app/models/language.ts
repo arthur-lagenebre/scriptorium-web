@@ -1,4 +1,4 @@
 export interface Language {
-    Code: string;
-    Value: string;
+    Code: string
+    Value: string
 }

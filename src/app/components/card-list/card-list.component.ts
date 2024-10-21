@@ -4,8 +4,7 @@ import { Subscription } from "rxjs";
 import { Card } from "../../models/card";
 import { CardService } from "../../services/card.service";
 import { RouterLink } from "@angular/router";
-import { Language } from "../../models/Language";
-import { Sett } from "../../models/Sett";
+import { Sett } from "../../models/sett";
 
 @Component({
   selector: 'ct-card-list',

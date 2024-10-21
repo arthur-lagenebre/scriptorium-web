@@ -1,7 +1,7 @@
-import { CardFace } from "./CardFace"
-import { Language } from "./Language"
-import { RelatedCard } from "./RelatedCard"
-import { Sett } from "./Sett"
+import { CardFace } from "./cardFace"
+import { Language } from "./language"
+import { RelatedCard } from "./relatedCard"
+import { Sett } from "./sett"
 
 export interface Card {
     OracleId: string

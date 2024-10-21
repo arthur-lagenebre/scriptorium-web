@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Card } from '../../../models/card';
-import { Sett } from "../../../models/Sett";
-import { Language } from "../../../models/Language";
+import { Sett } from "../../../models/sett";
+import { Language } from "../../../models/language";
 import { Observable } from 'rxjs';
 
 @Component({
@@ -23,10 +23,19 @@ export class TextComponent {
   }
 
   GetText(Languages: Language[]) {
-    return `<p>${Languages.find(x => x.Code === this.language)?.Value.replace("\n", "</p><p>")}</p>`;
+    let regex = /\n/gi;
+    return `<span>${Languages.find(x => x.Code === this.language)?.Value.replace(regex, "</span><br /><span>")}</span>`;
   }
 
-  GetArtist(Sets: Sett[]) {
-    return Sets.find(x => x.Order === 1)?.Flavors[0].Artist;
+  GetArtist(Sets: Sett[], index: number) {
+    return Sets.find(x => x.Order === 1)?.Flavors[index].Artist;
+  }
+
+  GetFlavorName(Sets: Sett[], index: number) {
+    return Sets.find(x => x.Order === 1)?.Flavors[index].FlavorName;
+  }
+
+  GetFlavorText(Sets: Sett[], index: number) {
+    return Sets.find(x => x.Order === 1)?.Flavors[index].FlavorText;
   }
 }

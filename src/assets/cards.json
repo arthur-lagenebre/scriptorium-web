@@ -399,7 +399,12 @@
   },
   {
     "OracleId": "396b088d-f9af-4ee1-843f-dbe1633f9cc8",
-    "Names": [],
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Obyra's Attendants // Desperate Parry"
+      }
+    ],
     "Typelines": [],
     "Texts": [],
     "ManaCost": "{4}{U} // {1}{U}",
@@ -415,6 +420,12 @@
             "FaceId": 0,
             "Artist": "Andreas Zafiratos",
             "FlavorText": "Obyra's devoted servants shrieked as their sleeping mistress slashed at them, unseeing.",
+            "FlavorName": ""
+          },
+          {
+            "FaceId": 1,
+            "Artist": "Andreas Zafiratos",
+            "FlavorText": "",
             "FlavorName": ""
           }
         ]
@@ -433,7 +444,7 @@
             "Value": "Obyra's Attendants"
           }
         ],
-        "TypeLines": [
+        "Typelines": [
           {
             "Code": "en",
             "Value": "Creature — Faerie Wizard"
@@ -459,7 +470,7 @@
             "Value": "Desperate Parry"
           }
         ],
-        "TypeLines": [
+        "Typelines": [
           {
             "Code": "en",
             "Value": "Instant — Adventure"
@@ -533,8 +544,163 @@
     ],
     "CardFaces": [],
     "RelatedCards": [],
-    "Creature": null,
-    "Planeswalker": null,
-    "Vanguard": null
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "e9137b54-3464-4f57-95e3-f94bf2ac854e",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Brokkos, Apex of Forever"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Legendary Creature — Nightmare Beast Elemental"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "Mutate {2}{U/B}{G}{G} (If you cast this spell for its mutate cost, put it over or under target non-Human creature you own. They mutate into the creature on top plus all abilities from under it.)\nTrample\nYou may cast Brokkos, Apex of Forever from your graveyard using its mutate ability."
+      }
+    ],
+    "Manacost": "{2}{B}{G}{U}",
+    "Sets": [
+      {
+        "Name": "Ikoria: Lair of Behemoths",
+        "Order": 1,
+        "CollectorNumber": "378",
+        "Rarity": "Mythic",
+        "ImageUrl": "https://cards.scryfall.io/large/front/4/c/4cf6ca85-0ef5-4104-b0e6-1137c4975579.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Svetlin Velinov",
+            "FlavorText": "",
+            "FlavorName": "Bio-Quartz Spacegodzilla"
+          }
+        ]
+      }
+    ],
+    "Languages": [
+      "en"
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": "6",
+    "Toughness": "6",
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "3ff4189b-e9c2-4139-b9ab-4cdbaa1ba886",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Barrin"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Vanguard"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "Sacrifice a permanent: Return target creature to its owner's hand."
+      }
+    ],
+    "Manacost": "",
+    "Sets": [
+      {
+        "Name": "Vanguard Series",
+        "Order": 1,
+        "CollectorNumber": "201",
+        "Rarity": "are",
+        "ImageUrl": "https://cards.scryfall.io/large/front/0/2/02f6b17c-89bd-47e1-9963-69260d5f2838.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Christopher Rush",
+            "FlavorText": "An old and powerful wizard living on the mysterious isle of Tolaria, Barrin is the teacher who trained the young Ertai. He is also Hanna's father, but for reasons known only to the two of them neither acknowledges the other—or their strained relationship.",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "Languages": [
+      "en"
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": null,
+    "HandModifier": "+0",
+    "LifeModifier": "+6"
+  },
+  {
+    "OracleId": "a3386efe-d6c5-4853-a4db-61460da3364a",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Dovin, Architect of Law"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Legendary Planeswalker — Dovin"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "+1: You gain 2 life and draw a card.\n−1: Tap target creature. It doesn't untap during its controller's next untap step.\n−9: Tap all permanents target opponent controls. That player skips their next untap step."
+      }
+    ],
+    "Manacost": "{4}{W}{U}",
+    "Sets": [
+      {
+        "Name": "Ravnica Allegiance",
+        "Order": 1,
+        "CollectorNumber": "265",
+        "Rarity": "mythic",
+        "ImageUrl": "https://cards.scryfall.io/large/front/b/0/b0c7cffe-8751-4da7-8c1c-59f472ef3735.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Kieran Yanner",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "Languages": [
+      "en"
+    ],
+    "CardFaces": [],
+    "RelatedCards": [
+      {
+        "Component": 1,
+        "Name": "Dovin's Dismissal",
+        "TypeLine": "Instant"
+      }
+    ],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": "5",
+    "HandModifier": null,
+    "LifeModifier": null
   }
 ]

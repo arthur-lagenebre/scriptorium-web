@@ -1,26 +1,66 @@
 @if (card$ | async; as card) {
+@if (card.CardFaces.length === 0) {
 <div>
   <div>
-    <h1 lang="{{language}}">
-      <span>{{GetValue(card.Names)}}</span>
-      <!-- <span class="card-text-mana-cost"><abbr class="card-symbol card-symbol-1" title="one generic mana">{1}</abbr><abbr class="card-symbol card-symbol-W" title="one white mana">{W}</abbr></span> -->
-    </h1>
+    <span>{{GetValue(card.Names)}}</span>
+    <span>{{card.ManaCost}}</span>
   </div>
   <div>
-    <p lang="{{language}}">{{GetValue(card.Typelines)}}</p>
+    <span>{{GetFlavorName(card.Sets, 0)}}</span>
   </div>
   <div>
-    <div [innerHTML]="GetText(card.Texts)">
-    </div>
+    <span>{{GetValue(card.Typelines)}}</span>
   </div>
-  <div *ngIf='card.Power'>
+  <div>
+    <span [innerHTML]="GetText(card.Texts)"></span>
+  </div>
+  <div>
+    <span style="font-style: italic;">{{GetFlavorText(card.Sets, 0)}}</span>
+  </div>
+  <div *ngIf="card.Power && card.Toughness">
     <span>{{card.Power}}/{{card.Toughness}}</span>
   </div>
-  <p>Illustrated by {{GetArtist(card.Sets)}}</p>
-  <div>
-    <span>Languages</span>
-    <br />
-    <span>{{card.Languages.join(", ")}}</span>
+  <div *ngIf="card.Loyalty">
+    <span>Loyalty: {{card.Loyalty}}</span>
   </div>
+  <div *ngIf="card.HandModifier && card.LifeModifier">
+    Hand Size: {{card.HandModifier}}
+    <br />
+    Starting Life: {{card.LifeModifier}}
+  </div>
+  <span>Illustrated by {{GetArtist(card.Sets, 0)}}</span>
+</div>
+}
+@else {
+  <div *ngFor="let cardFace of card.CardFaces; let index = index">
+    <div>
+      <span>{{GetValue(cardFace.Names)}}</span>
+      <span>{{cardFace.ManaCost}}</span>
+    </div>
+    <div>
+      <span>{{GetFlavorName(card.Sets, index)}}</span>
+    </div>
+    <div>
+      <span>{{GetValue(cardFace.Typelines)}}</span>
+    </div>
+    <div>
+      <span [innerHTML]="GetText(cardFace.Texts)"></span>
+    </div>
+    <div>
+      <span style="font-style: italic;">{{GetFlavorText(card.Sets, index)}}</span>
+    </div>
+    <div *ngIf="cardFace.Power && cardFace.Toughness">
+      <span>{{cardFace.Power}}/{{cardFace.Toughness}}</span>
+    </div>
+    <div *ngIf="cardFace.Loyalty">
+      <span>Loyalty: {{cardFace.Loyalty}}</span>
+    </div>
+    <span>Illustrated by {{GetArtist(card.Sets, index)}}</span>
+  </div>
+}
+<div>
+  <span>Languages</span>
+  <br />
+  <span>{{card.Languages.join(", ")}}</span>
 </div>
 }

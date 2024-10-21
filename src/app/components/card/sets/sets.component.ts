@@ -1,6 +1,6 @@
 import { Component, computed, Input, signal, SimpleChanges } from '@angular/core';
 import { Card } from '../../../models/card';
-import { Sett } from "../../../models/Sett";
+import { Sett } from "../../../models/sett";
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
