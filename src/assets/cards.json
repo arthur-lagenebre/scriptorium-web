@@ -521,7 +521,7 @@
         "Value": "{T}: Add {C}.\n{6}: Stalking Stones becomes a 3/3 Elemental artifact creature that's still a land. (This effect lasts indefinitely.)"
       }
     ],
-    "Manacost": "",
+    "ManaCost": "",
     "Sets": [
       {
         "Name": "World Championship Decks 1998",
@@ -570,7 +570,7 @@
         "Value": "Mutate {2}{U/B}{G}{G} (If you cast this spell for its mutate cost, put it over or under target non-Human creature you own. They mutate into the creature on top plus all abilities from under it.)\nTrample\nYou may cast Brokkos, Apex of Forever from your graveyard using its mutate ability."
       }
     ],
-    "Manacost": "{2}{B}{G}{U}",
+    "ManaCost": "{2}{B}{G}{U}",
     "Sets": [
       {
         "Name": "Ikoria: Lair of Behemoths",
@@ -619,13 +619,13 @@
         "Value": "Sacrifice a permanent: Return target creature to its owner's hand."
       }
     ],
-    "Manacost": "",
+    "ManaCost": "",
     "Sets": [
       {
         "Name": "Vanguard Series",
         "Order": 1,
         "CollectorNumber": "201",
-        "Rarity": "are",
+        "Rarity": "Rare",
         "ImageUrl": "https://cards.scryfall.io/large/front/0/2/02f6b17c-89bd-47e1-9963-69260d5f2838.jpg",
         "Flavors": [
           {
@@ -668,7 +668,7 @@
         "Value": "+1: You gain 2 life and draw a card.\n−1: Tap target creature. It doesn't untap during its controller's next untap step.\n−9: Tap all permanents target opponent controls. That player skips their next untap step."
       }
     ],
-    "Manacost": "{4}{W}{U}",
+    "ManaCost": "{4}{W}{U}",
     "Sets": [
       {
         "Name": "Ravnica Allegiance",
@@ -692,7 +692,7 @@
     "CardFaces": [],
     "RelatedCards": [
       {
-        "Component": 1,
+        "Component": "ComboPiece",
         "Name": "Dovin's Dismissal",
         "TypeLine": "Instant"
       }
@@ -700,6 +700,414 @@
     "Power": null,
     "Toughness": null,
     "Loyalty": "5",
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "4e7a8817-1a66-45c3-ade9-eac79b40b89f",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Emrakul, the Promised End"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Legendary Creature — Eldrazi"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "This spell costs {1} less to cast for each card type among cards in your graveyard.\nWhen you cast this spell, you gain control of target opponent during that player's next turn. After that turn, that player takes an extra turn.\nFlying, trample, protection from instants"
+      }
+    ],
+    "ManaCost": "{13}",
+    "Sets": [
+      {
+        "Name": "Eldritch Moon",
+        "Order": 1,
+        "CollectorNumber": "6",
+        "Rarity": "Mythic",
+        "ImageUrl": "https://cards.scryfall.io/large/front/8/d/8d74a469-c71d-4773-99d3-5456b31df424.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "John Avon",
+            "FlavorText": "An enigma as vexing as life itself.",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "Languages": [
+      "en"
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": "13",
+    "Toughness": "13",
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "c3974ec7-7af0-4b65-baf6-4c1c4fe8a5c4",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Ajani, Strength of the Pride"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Legendary Planeswalker — Ajani"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "+1: You gain life equal to the number of creatures you control plus the number of planeswalkers you control.\n−2: Create a 2/2 white Cat Soldier creature token named Ajani's Pridemate with \"Whenever you gain life, put a +1/+1 counter on Ajani's Pridemate.\"\n0: If you have at least 15 life more than your starting life total, exile Ajani, Strength of the Pride and each artifact and creature your opponents control."
+      }
+    ],
+    "ManaCost": "{2}{W}{W}",
+    "Sets": [
+      {
+        "Name": "The List",
+        "Order": 1,
+        "CollectorNumber": "M20-2",
+        "Rarity": "Mythic",
+        "ImageUrl": "https://cards.scryfall.io/large/front/4/9/49109f9f-c3df-4694-9c80-32fc28169442.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Chris Rallis",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "Languages": [
+      "en"
+    ],
+    "CardFaces": [],
+    "RelatedCards": [
+      {
+        "Component": "Token",
+        "Name": "Ajani's Pridemate",
+        "TypeLine": "Token Creature — Cat Soldier"
+      }
+    ],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": "5",
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "8c77f436-81ab-4200-b76d-58b1f91fc3d0",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Beastbreaker of Bala Ged"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Creature — Human Warrior"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "Level up {2}{G}\nLEVEL 1-3\n4/4\nLEVEL 4+\n6/6\nTrample"
+      }
+    ],
+    "ManaCost": "{1}{G}",
+    "Sets": [
+      {
+        "Name": "The List",
+        "Order": 1,
+        "CollectorNumber": "DDP-10",
+        "Rarity": "Uncommon",
+        "ImageUrl": "https://cards.scryfall.io/large/front/9/4/9499b38f-5030-4348-a0ff-9002b0e46f2a.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Karl Kopinski",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "Languages": [
+      "en"
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": "2",
+    "Toughness": "2",
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "11332981-f06a-48c7-a7b4-fce68e629e82",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Transcendent Master"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Creature — Human Cleric Avatar"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "Level up {1}\nLEVEL 6-11\n6/6\nLifelink\nLEVEL 12+\n9/9\nLifelink, indestructible"
+      }
+    ],
+    "ManaCost": "{1}{W}{W}",
+    "Sets": [
+      {
+        "Name": "Rise of the Eldrazi",
+        "Order": 1,
+        "CollectorNumber": "51",
+        "Rarity": "Mythic",
+        "ImageUrl": "https://cards.scryfall.io/large/front/6/b/6b007f42-9ec2-466b-8d6b-1d55c516080b.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Steven Belledin",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "Languages": [
+      "en"
+    ],
+    "CardFaces": [],
+    "RelatedCards": [],
+    "Power": "3",
+    "Toughness": "3",
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "5b8be856-c08d-4356-925d-fce843565189",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Hidetsugu Consumes All // Vessel of the All-Consuming"
+      }
+    ],
+    "Typelines": [],
+    "Texts": [],
+    "ManaCost": "",
+    "Sets": [
+      {
+        "Name": "Kamigawa: Neon Dynasty",
+        "Order": 1,
+        "CollectorNumber": "221",
+        "Rarity": "Mythic",
+        "ImageUrl": "https://cards.scryfall.io/large/front/8/e/8e910464-329a-4de1-930a-be85b1956676.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Chris Cold",
+            "FlavorText": "",
+            "FlavorName": ""
+          },
+          {
+            "FaceId": 1,
+            "Artist": "Chris Cold",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [
+      {
+        "FaceId": 0,
+        "ManaCost": "{1}{B}{R}",
+        "Names": [
+          {
+            "Code": "en",
+            "Value": "Hidetsugu Consumes All"
+          }
+        ],
+        "Typelines": [
+          {
+            "Code": "en",
+            "Value": "Enchantment — Saga"
+          }
+        ],
+        "Texts": [
+          {
+            "Code": "en",
+            "Value": "(As this Saga enters and after your draw step, add a lore counter.)\nI — Destroy each nonland permanent with mana value 1 or less.\nII — Exile all graveyards.\nIII — Exile this Saga, then return it to the battlefield transformed under your control."
+          }
+        ],
+        "Power": null,
+        "Toughness": null,
+        "Loyalty": null,
+        "Defense": null
+      },
+      {
+        "FaceId": 1,
+        "ManaCost": "",
+        "Names": [
+          {
+            "Code": "en",
+            "Value": "Vessel of the All-Consuming"
+          }
+        ],
+        "Typelines": [
+          {
+            "Code": "en",
+            "Value": "Enchantment Creature — Ogre Shaman"
+          }
+        ],
+        "Texts": [
+          {
+            "Code": "en",
+            "Value": "Trample\nWhenever Vessel of the All-Consuming deals damage, put a +1/+1 counter on it.\nWhenever Vessel of the All-Consuming deals damage to a player, if it has dealt 10 or more damage to that player this turn, they lose the game."
+          }
+        ],
+        "Power": "3",
+        "Toughness": "3",
+        "Loyalty": null,
+        "Defense": null
+      }
+    ],
+    "Languages": [
+      "en"
+    ],
+    "RelatedCards": [],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "54deeeef-be90-4975-9213-8355ddf3ce0c",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Fall of the Impostor"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Enchantment — Saga"
+      }
+    ],
+    "Texts": [{
+      "Code": "en",
+      "Value": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI, II — Put a +1/+1 counter on up to one target creature.\nIII — Exile a creature with the greatest power among creatures target opponent controls."
+    }],
+    "ManaCost": "{1}{G}{W}",
+    "Sets": [
+      {
+        "Name": "Kaldheim",
+        "Order": 1,
+        "CollectorNumber": "208",
+        "Rarity": "Uncommon",
+        "ImageUrl": "https://cards.scryfall.io/large/front/d/7/d7de696a-49c2-421d-a86c-bcffd68870c6.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Eric Deschamps",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [],
+    "Languages": [
+      "en"
+    ],
+    "RelatedCards": [
+      {
+        "Component": "ComboPiece",
+        "Name": "A-Fall of the Impostor",
+        "TypeLine": "Enchantment — Saga"
+      }
+    ],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "f5fba11b-7669-40a0-97c7-6cb7c13acedd",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Blink"
+      }
+    ],
+    "Typelines": [
+      {
+        "Code": "en",
+        "Value": "Enchantment — Saga"
+      }
+    ],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after IV.)\nI, III — Choose target creature. Its owner shuffles it into their library, then investigates. (They create a Clue token.)\nII, IV — Create a 2/2 black Alien Angel artifact creature token with first strike, vigilance, and \"Whenever an opponent casts a creature spell, this permanent isn't a creature until end of turn.\""
+      }
+    ],
+    "ManaCost": "{2}{U}{B}",
+    "Sets": [
+      {
+        "Name": "Doctor Who",
+        "Order": 1,
+        "CollectorNumber": "721",
+        "Rarity": "Rare",
+        "ImageUrl": "https://cards.scryfall.io/large/front/0/3/032adfbd-3898-410c-acf0-79b88f924520.jpg",
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Colin Boyer",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [],
+    "Languages": [
+      "en"
+    ],
+    "RelatedCards": [
+      {
+        "Component": "Token",
+        "Name": "Alien Angel",
+        "TypeLine": "Token Artifact Creature — Alien Angel"
+      }
+    ],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": null,
     "HandModifier": null,
     "LifeModifier": null
   }

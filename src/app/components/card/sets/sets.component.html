@@ -1,33 +1,33 @@
 @if (card$ |async; as card) {
-<div>
-    <span>#{{GetCollectionNumber(card.Sets)}} · {{GetRarity(card.Sets)}} · {{language}}<br/></span>
-</div>
-<table>
-    <thead>
-        <tr>
-            <th><span>Prints</span></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor='let set of card.Sets' [class.current]="set.Order === 1">
-            <td>
-                {{set.Name}}
-            </td>
-        </tr>
-    </tbody>
-</table>
-<table *ngIf="card.RelatedCards.length > 0">
-    <thead>
-        <tr>
-            <th><span>Faces, Tokens, &amp; Other Parts</span></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let relatedCard of card.RelatedCards">
-          <td>
-            {{relatedCard.Name}}
-          </td>
-        </tr>
-    </tbody>
-</table>
+    <div class="set-text">
+        <div class="set">
+            <span>{{GetSetName(card.Sets)}}</span>
+            <br />
+            <span>#{{GetCollectionNumber(card.Sets)}} · {{GetRarity(card.Sets)}}</span>
+        </div>
+        <div class="prints">
+            <span class="title">Prints</span>
+            <table>
+                <tbody>
+                    <tr *ngFor='let set of card.Sets' [class.current]="set.Order === 1">
+                        <td>
+                            <span>{{set.Name}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="related" *ngIf="card.RelatedCards.length > 0">
+            <span class="title">Faces, Tokens, &amp; Other Parts</span>
+            <table>
+                <tbody>
+                    <tr *ngFor="let relatedCard of card.RelatedCards">
+                      <td>
+                        <span>{{relatedCard.Name}}</span>
+                      </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+    </div>
 }

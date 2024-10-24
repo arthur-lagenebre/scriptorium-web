@@ -25,8 +25,8 @@ export class CardListComponent {
     return card.Names.length ? card.Names[0].Value : card.CardFaces[0].Names[0].Value;
   }  
 
-  GetImageUrl(Sets: Sett[]) {
-    return Sets.find(x => x.Order === 1)?.ImageUrl;
+  GetImageUrl(sets: Sett[]) {
+    return sets.find(x => x.Order === 1)?.ImageUrl;
   }
   
   ngOnInit(): void {

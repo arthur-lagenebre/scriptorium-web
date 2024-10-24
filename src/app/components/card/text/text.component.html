@@ -1,66 +1,71 @@
 @if (card$ | async; as card) {
-@if (card.CardFaces.length === 0) {
-<div>
-  <div>
-    <span>{{GetValue(card.Names)}}</span>
-    <span>{{card.ManaCost}}</span>
-  </div>
-  <div>
-    <span>{{GetFlavorName(card.Sets, 0)}}</span>
-  </div>
-  <div>
-    <span>{{GetValue(card.Typelines)}}</span>
-  </div>
-  <div>
-    <span [innerHTML]="GetText(card.Texts)"></span>
-  </div>
-  <div>
-    <span style="font-style: italic;">{{GetFlavorText(card.Sets, 0)}}</span>
-  </div>
-  <div *ngIf="card.Power && card.Toughness">
-    <span>{{card.Power}}/{{card.Toughness}}</span>
-  </div>
-  <div *ngIf="card.Loyalty">
-    <span>Loyalty: {{card.Loyalty}}</span>
-  </div>
-  <div *ngIf="card.HandModifier && card.LifeModifier">
-    Hand Size: {{card.HandModifier}}
-    <br />
-    Starting Life: {{card.LifeModifier}}
-  </div>
-  <span>Illustrated by {{GetArtist(card.Sets, 0)}}</span>
-</div>
-}
-@else {
-  <div *ngFor="let cardFace of card.CardFaces; let index = index">
+  <div class="card-text">
+    @if (card.CardFaces.length === 0) {
     <div>
-      <span>{{GetValue(cardFace.Names)}}</span>
-      <span>{{cardFace.ManaCost}}</span>
+      <div class="text-element">
+        <span class="card-name">{{GetValue(card.Names)}}</span>
+        <span [innerHTML]="GetManaCost(card.ManaCost)"></span>
+      </div>
+      <div class="text-element">
+        <span class="flavor-text card-name">{{GetFlavorName(card.Sets, 0)}}</span>
+      </div>
+      <div class="text-element">
+        <span>{{GetValue(card.Typelines)}}</span>
+      </div>
+      <div class="text-element">
+        <span [innerHTML]="GetText(card.Texts, card.Typelines)"></span>
+      </div>
+      <div class="text-element">
+        <span class="flavor-text">{{GetFlavorText(card.Sets, 0)}}</span>
+      </div>
+      <div class="text-element" *ngIf="card.Power && card.Toughness">
+        <span>{{card.Power}}/{{card.Toughness}}</span>
+      </div>
+      <div class="text-element" *ngIf="card.Loyalty">
+        <span><i class="ms ms-loyalty-start ms-loyalty-{{card.Loyalty}}"></i></span>
+      </div>
+      <div class="text-element" *ngIf="card.HandModifier && card.LifeModifier">
+        Hand Size: {{card.HandModifier}}
+        <br />
+        Starting Life: {{card.LifeModifier}}
+      </div>
+      <div class="text-element">
+        <span><i class="ms ms-artist-nib"></i> {{GetArtist(card.Sets, 0)}}</span>
+      </div>
     </div>
-    <div>
-      <span>{{GetFlavorName(card.Sets, index)}}</span>
+    } @else {
+      <div *ngFor="let cardFace of card.CardFaces; let index = index">
+        <div class="text-element">
+          <span class="card-name">{{GetValue(cardFace.Names)}}</span>
+          <span [innerHTML]="GetManaCost(cardFace.ManaCost)"></span>
+        </div>
+        <div class="text-element">
+          <span>{{GetFlavorName(card.Sets, index)}}</span>
+        </div>
+        <div class="text-element">
+          <span>{{GetValue(cardFace.Typelines)}}</span>
+        </div>
+        <div class="text-element">
+          <span [innerHTML]="GetText(cardFace.Texts, cardFace.Typelines)"></span>
+        </div>
+        <div class="text-element">
+          <span class="flavor-text">{{GetFlavorText(card.Sets, index)}}</span>
+        </div>
+        <div class="text-element" *ngIf="cardFace.Power && cardFace.Toughness">
+        <span>{{cardFace.Power}}/{{cardFace.Toughness}}</span>
+        </div>
+        <div class="text-element" *ngIf="cardFace.Loyalty">
+          <span><i class="ms ms-loyalty-start ms-loyalty-{{card.Loyalty}}"></i></span>
+        </div>
+        <div class="text-element">
+          <span><i class="ms ms-artist-nib"></i> {{GetArtist(card.Sets, index)}}</span>
+        </div>
+      </div>
+    }
+    <div class="text-element">
+      <span>Languages</span>
+      <br />
+      <span>{{card.Languages.join(", ")}}</span>
     </div>
-    <div>
-      <span>{{GetValue(cardFace.Typelines)}}</span>
-    </div>
-    <div>
-      <span [innerHTML]="GetText(cardFace.Texts)"></span>
-    </div>
-    <div>
-      <span style="font-style: italic;">{{GetFlavorText(card.Sets, index)}}</span>
-    </div>
-    <div *ngIf="cardFace.Power && cardFace.Toughness">
-      <span>{{cardFace.Power}}/{{cardFace.Toughness}}</span>
-    </div>
-    <div *ngIf="cardFace.Loyalty">
-      <span>Loyalty: {{cardFace.Loyalty}}</span>
-    </div>
-    <span>Illustrated by {{GetArtist(card.Sets, index)}}</span>
   </div>
-}
-<div>
-  <span>Languages</span>
-  <br />
-  <span>{{card.Languages.join(", ")}}</span>
-</div>
 }
