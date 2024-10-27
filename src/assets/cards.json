@@ -357,6 +357,22 @@
       {
         "Code": "fr",
         "Value": "Tisseur de toile"
+      },
+      {
+        "Code": "it",
+        "Value": "Ragnatela"
+      },
+      {
+        "Code": "de",
+        "Value": "Spinnennetz"
+      },
+      {
+        "Code": "pt",
+        "Value": "Teia"
+      },
+      {
+        "Code": "es",
+        "Value": "Telaraña"
       }
     ],
     "Typelines": [
@@ -367,6 +383,22 @@
       {
         "Code": "fr",
         "Value": "Enchantement : aura"
+      },
+      {
+        "Code": "it",
+        "Value": "Incantesimo — Aura"
+      },
+      {
+        "Code": "de",
+        "Value": "Verzauberung — Aura"
+      },
+      {
+        "Code": "pt",
+        "Value": "Encantamento — Aura"
+      },
+      {
+        "Code": "es",
+        "Value": "Encantamiento — Aura"
       }
     ],
     "Texts": [
@@ -377,6 +409,22 @@
       {
         "Code": "fr",
         "Value": "Enchanter : créature\nLa créature enchantée gagne +0/+2 et elle peut bloquer comme si elle avait le vol."
+      },
+      {
+        "Code": "it",
+        "Value": "Incanta creatura\nLa creatura incantata prende +0/+2 e può bloccare come se avesse volare."
+      },
+      {
+        "Code": "de",
+        "Value": "Kreaturenverzauberung\nDie verzauberte Kreatur erhält +0/+2 und kann blocken, als ob sie Flugfähigkeit hätte."
+      },
+      {
+        "Code": "pt",
+        "Value": "Encantar criatura\nA criatura encantada recebe +0/+2 e pode bloquear como se tivesse a habilidade de voar."
+      },
+      {
+        "Code": "es",
+        "Value": "Encantar criatura\nLa criatura encantada obtiene +0/+2 y puede bloquear como si tuviera la habilidad de volar."
       }
     ],
     "ManaCost": "{G}",
@@ -401,7 +449,11 @@
     ],
     "Languages": [
       "en",
-      "fr"
+      "de",
+      "es",
+      "fr",
+      "it",
+      "pt"
     ],
     "CardFaces": [],
     "RelatedCards": [],
