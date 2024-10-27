@@ -1,11 +1,11 @@
 @if (card$ |async; as card) {
     <div class="set-text">
-        <div class="set">
+        <div class="text-element">
             <span>{{GetSetName(card.Sets)}}</span>
             <br />
             <span>#{{GetCollectionNumber(card.Sets)}} · {{GetRarity(card.Sets)}}</span>
         </div>
-        <div class="prints">
+        <div class="text-element">
             <span class="title">Prints</span>
             <table>
                 <tbody>
@@ -17,7 +17,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="related" *ngIf="card.RelatedCards.length > 0">
+        <div class="text-element" *ngIf="card.RelatedCards.length > 0">
             <span class="title">Faces, Tokens, &amp; Other Parts</span>
             <table>
                 <tbody>

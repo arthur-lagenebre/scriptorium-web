@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Card } from '../../../models/card';
-import { Sett } from "../../../models/sett";
+import { CardSet } from "../../../models/cardSet";
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
@@ -15,15 +15,15 @@ export class SetsComponent {
   @Input() card$!: Observable<Card>;
   @Input() language: string = "en";
 
-  GetSetName(sets: Sett[]): string {
+  GetSetName(sets: CardSet[]): string {
     return sets.find(x => x.Order === 1)?.Name || "";
   }
 
-  GetCollectionNumber(sets: Sett[]): string {
+  GetCollectionNumber(sets: CardSet[]): string {
     return sets.find(x => x.Order === 1)?.CollectorNumber || "";
   }
 
-  GetRarity(sets: Sett[]): string {
+  GetRarity(sets: CardSet[]): string {
     return sets.find(x => x.Order === 1)?.Rarity || "";
   }
 }

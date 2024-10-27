@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Card } from '../../../models/card';
-import { Sett } from "../../../models/sett";
+import { CardSet } from "../../../models/cardSet";
 import { Language } from "../../../models/language";
 import { Observable } from 'rxjs';
 
@@ -41,14 +41,57 @@ export class TextComponent {
 
     if (typeline.includes("Planeswalker")) {
       result = this.ReplaceLoyalty(result);
+    } else if (typeline.includes("Saga")) {
+      result = this.ReplaceSaga(result);
     }
-    
+
     if (result.includes("Level up ")) {
       result = this.ReplaceLevelUp(result);
     }
 
     return result;
   }
+
+  ReplaceSaga(text: string): string {
+    let regex = /(I|II|III|IV|V|VI)(( —)|, )/gi;
+    let match;
+    
+    while ((match = regex.exec(text)) !== null) {
+      text = text.replace(match[0], '<i class="ms ms-saga ms-2x ms-saga-'+ this.RomanToInt(match[1]) + '"></i>');
+    }
+
+    return text;
+  }
+
+  RomanToInt(s: string): number {
+    const roman: { [key: string]: number } = {
+      I: 1,
+      V: 5,
+      X: 10,
+      L: 50,
+      C: 100,
+      D: 500,
+      M: 1000,
+    };
+
+    let total = 0;
+    let prevValue = 0;
+
+    for (let i = s.length - 1; i >= 0; i--) {
+
+      const currentValue = roman[s[i]];
+
+      if (currentValue < prevValue) {
+        total -= currentValue;
+      } else {
+        total += currentValue;
+      }
+
+      prevValue = currentValue;
+    }
+
+    return total;
+  };
 
   ReplaceReturnLine(text: string): string {
     let regexRL = /\n/gi;
@@ -105,15 +148,15 @@ export class TextComponent {
     return text;
   }
 
-  GetArtist(sets: Sett[], index: number): string {
+  GetArtist(sets: CardSet[], index: number): string {
     return sets.find(x => x.Order === 1)?.Flavors[index].Artist || "";
   }
 
-  GetFlavorName(sets: Sett[], index: number): string {
+  GetFlavorName(sets: CardSet[], index: number): string {
     return sets.find(x => x.Order === 1)?.Flavors[index].FlavorName || "";
   }
 
-  GetFlavorText(sets: Sett[], index: number): string {
+  GetFlavorText(sets: CardSet[], index: number): string {
     return sets.find(x => x.Order === 1)?.Flavors[index].FlavorText || "";
   }
 }

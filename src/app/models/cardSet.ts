@@ -1,6 +1,6 @@
 import { Flavor } from "./flavor";
 
-export interface Sett {
+export interface CardSet {
     Name: string
     Order: number
     CollectorNumber: string

@@ -1,7 +1,7 @@
 import { CardFace } from "./cardFace"
 import { Language } from "./language"
 import { RelatedCard } from "./relatedCard"
-import { Sett } from "./sett"
+import { CardSet } from "./cardSet"
 
 export interface Card {
     OracleId: string
@@ -9,7 +9,7 @@ export interface Card {
     Typelines: Language[]
     Texts: Language[]
     ManaCost: string
-    Sets: Sett[]
+    Sets: CardSet[]
     Languages: string[]
     CardFaces: CardFace[]
     RelatedCards: RelatedCard[]

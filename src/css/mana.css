@@ -1584,6 +1584,7 @@ span.ms-half > .ms-cost {
 .ms-saga {
   color: #111;
 }
+
 .ms-saga-1::after, .ms-saga-2::after, .ms-saga-3::after, .ms-saga-4::after, .ms-saga-5::after, .ms-saga-6::after {
   color: #fff;
   display: inline-block;

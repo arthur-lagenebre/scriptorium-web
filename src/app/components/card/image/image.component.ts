@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Card } from '../../../models/card';
-import { Sett } from "../../../models/sett";
+import { CardSet } from "../../../models/cardSet";
 import { Language } from "../../../models/language";
 import { Observable } from 'rxjs';
 
@@ -21,7 +21,7 @@ export class ImageComponent {
     return languages[0].Value;
   }  
 
-  GetImageUrl(sets: Sett[]): string {
+  GetImageUrl(sets: CardSet[]): string {
     return sets.find(x => x.Order === 1)?.ImageUrl || "";
   }
 }
