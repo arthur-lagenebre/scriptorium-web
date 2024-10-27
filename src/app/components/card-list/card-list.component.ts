@@ -21,12 +21,12 @@ export class CardListComponent {
 
   constructor(private cardService: CardService) {}
 
-  GetCardName(card: Card) {
+  GetCardName(card: Card): string {
     return card.Names.length ? card.Names[0].Value : card.CardFaces[0].Names[0].Value;
   }  
 
-  GetImageUrl(sets: CardSet[]) {
-    return sets.find(x => x.Order === 1)?.ImageUrl;
+  GetImageUrl(sets: CardSet[]): string {
+    return sets.find(x => x.Order === 1)?.ImageUrls[0] || "";
   }
   
   ngOnInit(): void {

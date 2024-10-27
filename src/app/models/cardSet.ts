@@ -5,6 +5,6 @@ export interface CardSet {
     Order: number
     CollectorNumber: string
     Rarity: string
-    ImageUrl: string
+    ImageUrls: string[]
     Flavors: Flavor[]
 }

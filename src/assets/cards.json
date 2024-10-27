@@ -26,7 +26,9 @@
         "Order": 1,
         "CollectorNumber": "280",
         "Rarity": "Common",
-        "ImageUrl": "https://cards.scryfall.io/large/front/0/0/0000419b-0bba-4488-8f7a-6194544ce91e.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/0/0/0000419b-0bba-4488-8f7a-6194544ce91e.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -41,7 +43,9 @@
         "Order": 2,
         "CollectorNumber": "276",
         "Rarity": "Common",
-        "ImageUrl": "https://cards.scryfall.io/large/front/8/1/8126b842-ea58-4988-8b3f-0394cf766b91.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/8/1/8126b842-ea58-4988-8b3f-0394cf766b91.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -90,7 +94,9 @@
         "Order": 1,
         "CollectorNumber": "157",
         "Rarity": "Uncommon",
-        "ImageUrl": "https://cards.scryfall.io/large/front/a/8/a8a64329-09fc-4e0d-b7d1-378635f2801a.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/a/8/a8a64329-09fc-4e0d-b7d1-378635f2801a.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -139,7 +145,9 @@
         "Order": 1,
         "CollectorNumber": "21",
         "Rarity": "Common",
-        "ImageUrl": "https://cards.scryfall.io/large/front/0/0/00006596-1166-4a79-8443-ca9f82e6db4e.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/0/0/00006596-1166-4a79-8443-ca9f82e6db4e.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -188,7 +196,9 @@
         "Order": 1,
         "CollectorNumber": "73",
         "Rarity": "Rare",
-        "ImageUrl": "https://cards.scryfall.io/large/front/9/3/93fb7e08-ff15-49b9-bed8-0faadfa8338f.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/9/3/93fb7e08-ff15-49b9-bed8-0faadfa8338f.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -237,7 +247,9 @@
         "Order": 1,
         "CollectorNumber": "5",
         "Rarity": "Common",
-        "ImageUrl": "https://cards.scryfall.io/large/front/7/e/7ebb3b03-943e-4b5a-be04-f59316b81333.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/7/e/7ebb3b03-943e-4b5a-be04-f59316b81333.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -374,7 +386,9 @@
         "Order": 1,
         "CollectorNumber": "229",
         "Rarity": "Rare",
-        "ImageUrl": "https://cards.scryfall.io/large/front/0/0/00012bd8-ed68-4978-a22d-f450c8a6e048.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/0/0/00012bd8-ed68-4978-a22d-f450c8a6e048.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -414,7 +428,9 @@
         "Order": 1,
         "CollectorNumber": "63",
         "Rarity": "Common",
-        "ImageUrl": "https://cards.scryfall.io/large/front/0/0/0001e77a-7fff-49d2-a55c-42f6fdf6db08.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/0/0/0001e77a-7fff-49d2-a55c-42f6fdf6db08.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -528,7 +544,9 @@
         "Order": 1,
         "CollectorNumber": "rb327",
         "Rarity": "Uncommon",
-        "ImageUrl": "https://cards.scryfall.io/large/front/3/b/3bc700c1-7c01-4945-a4f2-0eaa67797168.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/3/b/3bc700c1-7c01-4945-a4f2-0eaa67797168.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -577,7 +595,9 @@
         "Order": 1,
         "CollectorNumber": "378",
         "Rarity": "Mythic",
-        "ImageUrl": "https://cards.scryfall.io/large/front/4/c/4cf6ca85-0ef5-4104-b0e6-1137c4975579.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/4/c/4cf6ca85-0ef5-4104-b0e6-1137c4975579.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -626,7 +646,9 @@
         "Order": 1,
         "CollectorNumber": "201",
         "Rarity": "Rare",
-        "ImageUrl": "https://cards.scryfall.io/large/front/0/2/02f6b17c-89bd-47e1-9963-69260d5f2838.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/0/2/02f6b17c-89bd-47e1-9963-69260d5f2838.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -675,7 +697,9 @@
         "Order": 1,
         "CollectorNumber": "265",
         "Rarity": "mythic",
-        "ImageUrl": "https://cards.scryfall.io/large/front/b/0/b0c7cffe-8751-4da7-8c1c-59f472ef3735.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/b/0/b0c7cffe-8751-4da7-8c1c-59f472ef3735.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -730,7 +754,9 @@
         "Order": 1,
         "CollectorNumber": "6",
         "Rarity": "Mythic",
-        "ImageUrl": "https://cards.scryfall.io/large/front/8/d/8d74a469-c71d-4773-99d3-5456b31df424.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/8/d/8d74a469-c71d-4773-99d3-5456b31df424.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -779,7 +805,9 @@
         "Order": 1,
         "CollectorNumber": "M20-2",
         "Rarity": "Mythic",
-        "ImageUrl": "https://cards.scryfall.io/large/front/4/9/49109f9f-c3df-4694-9c80-32fc28169442.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/4/9/49109f9f-c3df-4694-9c80-32fc28169442.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -834,7 +862,9 @@
         "Order": 1,
         "CollectorNumber": "DDP-10",
         "Rarity": "Uncommon",
-        "ImageUrl": "https://cards.scryfall.io/large/front/9/4/9499b38f-5030-4348-a0ff-9002b0e46f2a.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/9/4/9499b38f-5030-4348-a0ff-9002b0e46f2a.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -883,7 +913,9 @@
         "Order": 1,
         "CollectorNumber": "51",
         "Rarity": "Mythic",
-        "ImageUrl": "https://cards.scryfall.io/large/front/6/b/6b007f42-9ec2-466b-8d6b-1d55c516080b.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/6/b/6b007f42-9ec2-466b-8d6b-1d55c516080b.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -922,7 +954,10 @@
         "Order": 1,
         "CollectorNumber": "221",
         "Rarity": "Mythic",
-        "ImageUrl": "https://cards.scryfall.io/large/front/8/e/8e910464-329a-4de1-930a-be85b1956676.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/8/e/8e910464-329a-4de1-930a-be85b1956676.jpg",
+          "https://cards.scryfall.io/large/back/8/e/8e910464-329a-4de1-930a-be85b1956676.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -1017,10 +1052,12 @@
         "Value": "Enchantment — Saga"
       }
     ],
-    "Texts": [{
-      "Code": "en",
-      "Value": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI, II — Put a +1/+1 counter on up to one target creature.\nIII — Exile a creature with the greatest power among creatures target opponent controls."
-    }],
+    "Texts": [
+      {
+        "Code": "en",
+        "Value": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI, II — Put a +1/+1 counter on up to one target creature.\nIII — Exile a creature with the greatest power among creatures target opponent controls."
+      }
+    ],
     "ManaCost": "{1}{G}{W}",
     "Sets": [
       {
@@ -1028,7 +1065,9 @@
         "Order": 1,
         "CollectorNumber": "208",
         "Rarity": "Uncommon",
-        "ImageUrl": "https://cards.scryfall.io/large/front/d/7/d7de696a-49c2-421d-a86c-bcffd68870c6.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/d/7/d7de696a-49c2-421d-a86c-bcffd68870c6.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,
@@ -1083,7 +1122,9 @@
         "Order": 1,
         "CollectorNumber": "721",
         "Rarity": "Rare",
-        "ImageUrl": "https://cards.scryfall.io/large/front/0/3/032adfbd-3898-410c-acf0-79b88f924520.jpg",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/0/3/032adfbd-3898-410c-acf0-79b88f924520.jpg"
+        ],
         "Flavors": [
           {
             "FaceId": 0,

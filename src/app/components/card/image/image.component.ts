@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Card } from '../../../models/card';
 import { CardSet } from "../../../models/cardSet";
-import { Language } from "../../../models/language";
 import { Observable } from 'rxjs';
 
 @Component({
@@ -17,11 +16,15 @@ export class ImageComponent {
 
   constructor() {}
 
-  GetCardName(languages: Language[]): string {
-    return languages[0].Value;
+  GetCardName(card: Card, index: number): string {
+    if (card.CardFaces.length > 0) {
+      return card.CardFaces[index].Names[0].Value;
+    }
+
+    return card.Names[0].Value;
   }  
 
-  GetImageUrl(sets: CardSet[]): string {
-    return sets.find(x => x.Order === 1)?.ImageUrl || "";
+  GetImageUrl(sets: CardSet[]): string[] {
+    return sets.find(x => x.Order === 1)?.ImageUrls || [];
   }
 }
