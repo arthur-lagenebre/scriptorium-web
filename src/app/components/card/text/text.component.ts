@@ -4,11 +4,13 @@ import { Card } from '../../../models/card';
 import { CardSet } from "../../../models/cardSet";
 import { Language } from "../../../models/language";
 import { Observable } from 'rxjs';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'ct-text',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatButtonToggleModule, FormsModule, ReactiveFormsModule],
   templateUrl: './text.component.html',
   styleUrl: './text.component.scss'
 })

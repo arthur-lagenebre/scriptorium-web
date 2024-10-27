@@ -62,10 +62,10 @@
         </div>
       </div>
     }
-    <div class="text-element">
-      <span>Languages</span>
-      <br />
-      <span>{{card.Languages.join(", ")}}</span>
+    <div class="text-language">
+      <mat-button-toggle-group [(ngModel)]="language" name="languages" aria-label="Languages" hideSingleSelectionIndicator="true" value="{{this.language}}">
+        <mat-button-toggle *ngFor="let language of card.Languages;" [value]="language">{{language}}</mat-button-toggle>
+      </mat-button-toggle-group>
     </div>
   </div>
 }
