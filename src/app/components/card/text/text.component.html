@@ -6,16 +6,16 @@
         <span class="card-name">{{GetValue(card.Names)}}</span>
         <span [innerHTML]="GetManaCost(card.ManaCost)"></span>
       </div>
-      <div class="text-element">
+      <div class="text-element" *ngIf="GetFlavorName(card.Sets, 0) !== ''">
         <span class="flavor-text card-name">{{GetFlavorName(card.Sets, 0)}}</span>
       </div>
       <div class="text-element">
         <span>{{GetValue(card.Typelines)}}</span>
       </div>
-      <div class="text-element">
+      <div class="text-element" *ngIf="GetText(card.Texts, card.Typelines) !== ''">
         <span [innerHTML]="GetText(card.Texts, card.Typelines)"></span>
       </div>
-      <div class="text-element">
+      <div class="text-element" *ngIf="GetFlavorText(card.Sets, 0) !== ''">
         <span class="flavor-text">{{GetFlavorText(card.Sets, 0)}}</span>
       </div>
       <div class="text-element" *ngIf="card.Power && card.Toughness">
@@ -39,16 +39,16 @@
           <span class="card-name">{{GetValue(cardFace.Names)}}</span>
           <span [innerHTML]="GetManaCost(cardFace.ManaCost)"></span>
         </div>
-        <div class="text-element">
+        <div class="text-element" *ngIf="GetFlavorName(card.Sets, index) !== ''">
           <span>{{GetFlavorName(card.Sets, index)}}</span>
         </div>
         <div class="text-element">
           <span>{{GetValue(cardFace.Typelines)}}</span>
         </div>
-        <div class="text-element">
+        <div class="text-element" *ngIf="GetText(cardFace.Texts, cardFace.Typelines) !== ''">
           <span [innerHTML]="GetText(cardFace.Texts, cardFace.Typelines)"></span>
         </div>
-        <div class="text-element">
+        <div class="text-element" *ngIf="GetFlavorText(card.Sets, index) !== ''">
           <span class="flavor-text">{{GetFlavorText(card.Sets, index)}}</span>
         </div>
         <div class="text-element" *ngIf="cardFace.Power && cardFace.Toughness">

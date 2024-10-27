@@ -15,15 +15,15 @@ export class SetsComponent {
   @Input() card$!: Observable<Card>;
   @Input() language: string = "en";
 
-  GetSetName(sets: Sett[]) {
-    return sets.find(x => x.Order === 1)?.Name;
+  GetSetName(sets: Sett[]): string {
+    return sets.find(x => x.Order === 1)?.Name || "";
   }
 
-  GetCollectionNumber(sets: Sett[]) {
-    return sets.find(x => x.Order === 1)?.CollectorNumber;
+  GetCollectionNumber(sets: Sett[]): string {
+    return sets.find(x => x.Order === 1)?.CollectorNumber || "";
   }
 
-  GetRarity(sets: Sett[]) {
-    return sets.find(x => x.Order === 1)?.Rarity;
+  GetRarity(sets: Sett[]): string {
+    return sets.find(x => x.Order === 1)?.Rarity || "";
   }
 }

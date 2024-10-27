@@ -17,11 +17,11 @@ export class ImageComponent {
 
   constructor() {}
 
-  GetCardName(languages: Language[]) {
+  GetCardName(languages: Language[]): string {
     return languages[0].Value;
   }  
 
-  GetImageUrl(sets: Sett[]) {
-    return sets.find(x => x.Order === 1)?.ImageUrl;
+  GetImageUrl(sets: Sett[]): string {
+    return sets.find(x => x.Order === 1)?.ImageUrl || "";
   }
 }

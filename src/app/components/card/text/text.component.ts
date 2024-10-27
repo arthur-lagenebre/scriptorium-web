@@ -32,7 +32,7 @@ export class TextComponent {
     return result !== "" ? "&nbsp;&nbsp;" + result : "";
   }
 
-  GetText(languages: Language[], typelines: Language[]) {
+  GetText(languages: Language[], typelines: Language[]): string {
     let result: string = languages.find(x => x.Code === this.language)?.Value || "";
     let typeline = typelines.find(x => x.Code === "en")?.Value || "";
 
