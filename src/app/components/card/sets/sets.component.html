@@ -11,7 +11,7 @@
                 <tbody>
                     <tr *ngFor='let set of card.Sets' [class.current]="set.Order === selectedSet">
                         <td>
-                            <span>{{set.Name}}</span>
+                            <span>{{set.Name}} #{{set.CollectorNumber}}</span>
                         </td>
                     </tr>
                 </tbody>
@@ -28,6 +28,6 @@
                     </tr>
                 </tbody>
             </table>
-            </div>
+        </div>
     </div>
 }

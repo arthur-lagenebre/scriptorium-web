@@ -430,8 +430,59 @@
     "ManaCost": "{G}",
     "Sets": [
       {
-        "Name": "Revised Edition",
+        "Name": "30th Anniversary Edition",
         "Order": 1,
+        "CollectorNumber": "224",
+        "Rarity": "Rare",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/5/0/50d61242-dc24-4083-a078-81e932721fd8.jpg"
+        ],
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Rob Alexander",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      },
+      {
+        "Name": "Ninth Edition",
+        "Order": 2,
+        "CollectorNumber": "281",
+        "Rarity": "Uncommon",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/9/1/91173ce1-62a9-4d0e-8b2a-9bc33858c4fc.jpg"
+        ],
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Hugh Jamieson",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      },
+      {
+        "Name": "Fourth Edition",
+        "Order": 3,
+        "CollectorNumber": "229",
+        "Rarity": "Rare",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/0/5/0547a390-ceee-4b8a-9d0e-36d8778ec693.jpg"
+        ],
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Rob Alexander",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      },
+      {
+        "Name": "Revised Edition",
+        "Order": 4,
         "CollectorNumber": "229",
         "Rarity": "Rare",
         "ImageUrls": [
@@ -592,8 +643,42 @@
     "ManaCost": "",
     "Sets": [
       {
-        "Name": "World Championship Decks 1998",
+        "Name": "The List",
         "Order": 1,
+        "CollectorNumber": "MRD-284",
+        "Rarity": "Uncommon",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/c/9/c9c34c85-a4ab-4510-9ec2-a8214a4f4414.jpg"
+        ],
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "David Day",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      },
+      {
+        "Name": "Tempest Remastered",
+        "Order": 2,
+        "CollectorNumber": "245",
+        "Rarity": "Uncommon",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/2/7/27856bc5-4f39-4461-baa0-700442942aff.jpg"
+        ],
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Stephen Daniele",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      },
+      {
+        "Name": "World Championship Decks 1998",
+        "Order": 3,
         "CollectorNumber": "rb327",
         "Rarity": "Uncommon",
         "ImageUrls": [
@@ -645,6 +730,23 @@
       {
         "Name": "Ikoria: Lair of Behemoths",
         "Order": 1,
+        "CollectorNumber": "179",
+        "Rarity": "Mythic",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/c/9/c9f07625-fbd8-4581-8568-eb3cfb2a4c1e.jpg"
+        ],
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Filip Burburan",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      },
+      {
+        "Name": "Ikoria: Lair of Behemoths",
+        "Order": 2,
         "CollectorNumber": "378",
         "Rarity": "Mythic",
         "ImageUrls": [
