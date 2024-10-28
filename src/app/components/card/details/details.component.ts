@@ -19,6 +19,7 @@ export class DetailsComponent {
   currentCard$!: Observable<Card>;
   defaultLanguage: string = navigator.languages[1] || "en";
   currentLanguage: string = "";
+  selectedSet: number = 1;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 

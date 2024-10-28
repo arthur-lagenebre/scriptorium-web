@@ -17,6 +17,7 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 export class TextComponent {
   @Input() card$!: Observable<Card>;
   @Input() language: string = "en";
+  @Input() selectedSet: number = 1;
 
   constructor() { }
 
@@ -151,14 +152,14 @@ export class TextComponent {
   }
 
   GetArtist(sets: CardSet[], index: number): string {
-    return sets.find(x => x.Order === 1)?.Flavors[index].Artist || "";
+    return sets.find(x => x.Order === this.selectedSet)?.Flavors[index].Artist || "";
   }
 
   GetFlavorName(sets: CardSet[], index: number): string {
-    return sets.find(x => x.Order === 1)?.Flavors[index].FlavorName || "";
+    return sets.find(x => x.Order === this.selectedSet)?.Flavors[index].FlavorName || "";
   }
 
   GetFlavorText(sets: CardSet[], index: number): string {
-    return sets.find(x => x.Order === 1)?.Flavors[index].FlavorText || "";
+    return sets.find(x => x.Order === this.selectedSet)?.Flavors[index].FlavorText || "";
   }
 }

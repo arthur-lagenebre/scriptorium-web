@@ -1,12 +1,12 @@
 <a [routerLink]="['/card-list']">Back to list</a>
 <div class="flex-container">
     <div class="flex-child">
-        <ct-image [card$]="currentCard$"></ct-image>
+        <ct-image [card$]="currentCard$" [selectedSet]="selectedSet"></ct-image>
     </div>
     <div class="flex-child">
-        <ct-text [card$]="currentCard$" [language]="currentLanguage"></ct-text>
+        <ct-text [card$]="currentCard$" [language]="currentLanguage" [selectedSet]="selectedSet"></ct-text>
     </div>
     <div class="flex-child">
-        <ct-sets [card$]="currentCard$" [language]="currentLanguage"></ct-sets>
+        <ct-sets [card$]="currentCard$" [language]="currentLanguage" [selectedSet]="selectedSet"></ct-sets>
     </div>
 </div>

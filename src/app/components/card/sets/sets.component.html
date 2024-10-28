@@ -9,7 +9,7 @@
             <span class="title">Prints</span>
             <table>
                 <tbody>
-                    <tr *ngFor='let set of card.Sets' [class.current]="set.Order === 1">
+                    <tr *ngFor='let set of card.Sets' [class.current]="set.Order === selectedSet">
                         <td>
                             <span>{{set.Name}}</span>
                         </td>

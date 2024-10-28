@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
 })
 export class ImageComponent {
   @Input() card$!: Observable<Card>;
+  @Input() selectedSet: number = 1;
 
   constructor() {}
 
@@ -25,6 +26,6 @@ export class ImageComponent {
   }  
 
   GetImageUrl(sets: CardSet[]): string[] {
-    return sets.find(x => x.Order === 1)?.ImageUrls || [];
+    return sets.find(x => x.Order === this.selectedSet)?.ImageUrls || [];
   }
 }
