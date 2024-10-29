@@ -57,6 +57,9 @@
         <div class="text-element" *ngIf="cardFace.Loyalty">
           <span><i class="ms ms-loyalty-start ms-loyalty-{{card.Loyalty}}"></i></span>
         </div>
+        <div class="text-element" *ngIf="cardFace.Defense">
+          <span><i class="ms ms-defense ms-defense-{{cardFace.Defense}} ms-2x"></i></span>
+        </div>
         <div class="text-element">
           <span><i class="ms ms-artist-nib"></i> {{GetArtist(card.Sets, index)}}</span>
         </div>

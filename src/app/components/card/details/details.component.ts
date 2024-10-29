@@ -23,6 +23,10 @@ export class DetailsComponent {
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
+  UpdateSetId(id: number): void {
+    this.selectedSet = id;
+  }
+
   ngOnInit() {
     this.currentCard$ = this.activatedRoute.data.pipe(map(data => data['card']));
     this.currentCard$.subscribe(next =>

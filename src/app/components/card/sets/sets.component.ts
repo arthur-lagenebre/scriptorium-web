@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Card } from '../../../models/card';
 import { CardSet } from "../../../models/cardSet";
 import { CommonModule } from '@angular/common';
@@ -13,8 +13,13 @@ import { Observable } from 'rxjs';
 })
 export class SetsComponent {
   @Input() card$!: Observable<Card>;
-  @Input() language: string = "en";
-  @Input() selectedSet: number = 1;
+  @Input() language = "en";
+  @Input() selectedSet = 1;
+  @Output() updatedSetEvent = new EventEmitter<number>();
+
+  UpdateSetId(id: number): void {
+    this.updatedSetEvent.emit(id);
+  }
 
   GetSetName(sets: CardSet[]): string {
     return sets.find(x => x.Order === this.selectedSet)?.Name || "";

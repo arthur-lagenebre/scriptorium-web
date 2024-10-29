@@ -25,7 +25,7 @@
         "Name": "Bloomburrow",
         "Order": 1,
         "CollectorNumber": "280",
-        "Rarity": "Common",
+        "Rarity": "common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/0/0000419b-0bba-4488-8f7a-6194544ce91e.jpg"
         ],
@@ -42,7 +42,7 @@
         "Name": "Murders at Karlov Manor",
         "Order": 2,
         "CollectorNumber": "276",
-        "Rarity": "Common",
+        "Rarity": "common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/8/1/8126b842-ea58-4988-8b3f-0394cf766b91.jpg"
         ],
@@ -93,7 +93,7 @@
         "Name": "Time Spiral",
         "Order": 1,
         "CollectorNumber": "157",
-        "Rarity": "Uncommon",
+        "Rarity": "uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/a/8/a8a64329-09fc-4e0d-b7d1-378635f2801a.jpg"
         ],
@@ -144,7 +144,7 @@
         "Name": "Zendikar",
         "Order": 1,
         "CollectorNumber": "21",
-        "Rarity": "Common",
+        "Rarity": "common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/0/00006596-1166-4a79-8443-ca9f82e6db4e.jpg"
         ],
@@ -195,7 +195,7 @@
         "Name": "Commander 2017",
         "Order": 1,
         "CollectorNumber": "73",
-        "Rarity": "Rare",
+        "Rarity": "rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/9/3/93fb7e08-ff15-49b9-bed8-0faadfa8338f.jpg"
         ],
@@ -246,7 +246,7 @@
         "Name": "Modern Masters 2015 Tokens",
         "Order": 1,
         "CollectorNumber": "5",
-        "Rarity": "Common",
+        "Rarity": "common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/7/e/7ebb3b03-943e-4b5a-be04-f59316b81333.jpg"
         ],
@@ -433,7 +433,7 @@
         "Name": "30th Anniversary Edition",
         "Order": 1,
         "CollectorNumber": "224",
-        "Rarity": "Rare",
+        "Rarity": "rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/5/0/50d61242-dc24-4083-a078-81e932721fd8.jpg"
         ],
@@ -450,7 +450,7 @@
         "Name": "Ninth Edition",
         "Order": 2,
         "CollectorNumber": "281",
-        "Rarity": "Uncommon",
+        "Rarity": "uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/9/1/91173ce1-62a9-4d0e-8b2a-9bc33858c4fc.jpg"
         ],
@@ -467,7 +467,7 @@
         "Name": "Fourth Edition",
         "Order": 3,
         "CollectorNumber": "229",
-        "Rarity": "Rare",
+        "Rarity": "rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/5/0547a390-ceee-4b8a-9d0e-36d8778ec693.jpg"
         ],
@@ -484,7 +484,7 @@
         "Name": "Revised Edition",
         "Order": 4,
         "CollectorNumber": "229",
-        "Rarity": "Rare",
+        "Rarity": "rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/0/00012bd8-ed68-4978-a22d-f450c8a6e048.jpg"
         ],
@@ -530,7 +530,7 @@
         "Name": "Wilds of Eldraine",
         "Order": 1,
         "CollectorNumber": "63",
-        "Rarity": "Common",
+        "Rarity": "common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/0/0001e77a-7fff-49d2-a55c-42f6fdf6db08.jpg"
         ],
@@ -646,7 +646,7 @@
         "Name": "The List",
         "Order": 1,
         "CollectorNumber": "MRD-284",
-        "Rarity": "Uncommon",
+        "Rarity": "uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/c/9/c9c34c85-a4ab-4510-9ec2-a8214a4f4414.jpg"
         ],
@@ -663,7 +663,7 @@
         "Name": "Tempest Remastered",
         "Order": 2,
         "CollectorNumber": "245",
-        "Rarity": "Uncommon",
+        "Rarity": "uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/2/7/27856bc5-4f39-4461-baa0-700442942aff.jpg"
         ],
@@ -680,7 +680,7 @@
         "Name": "World Championship Decks 1998",
         "Order": 3,
         "CollectorNumber": "rb327",
-        "Rarity": "Uncommon",
+        "Rarity": "uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/3/b/3bc700c1-7c01-4945-a4f2-0eaa67797168.jpg"
         ],
@@ -731,7 +731,7 @@
         "Name": "Ikoria: Lair of Behemoths",
         "Order": 1,
         "CollectorNumber": "179",
-        "Rarity": "Mythic",
+        "Rarity": "mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/c/9/c9f07625-fbd8-4581-8568-eb3cfb2a4c1e.jpg"
         ],
@@ -748,7 +748,7 @@
         "Name": "Ikoria: Lair of Behemoths",
         "Order": 2,
         "CollectorNumber": "378",
-        "Rarity": "Mythic",
+        "Rarity": "mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/4/c/4cf6ca85-0ef5-4104-b0e6-1137c4975579.jpg"
         ],
@@ -799,7 +799,7 @@
         "Name": "Vanguard Series",
         "Order": 1,
         "CollectorNumber": "201",
-        "Rarity": "Rare",
+        "Rarity": "rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/2/02f6b17c-89bd-47e1-9963-69260d5f2838.jpg"
         ],
@@ -907,7 +907,7 @@
         "Name": "Eldritch Moon",
         "Order": 1,
         "CollectorNumber": "6",
-        "Rarity": "Mythic",
+        "Rarity": "mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/8/d/8d74a469-c71d-4773-99d3-5456b31df424.jpg"
         ],
@@ -958,7 +958,7 @@
         "Name": "The List",
         "Order": 1,
         "CollectorNumber": "M20-2",
-        "Rarity": "Mythic",
+        "Rarity": "mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/4/9/49109f9f-c3df-4694-9c80-32fc28169442.jpg"
         ],
@@ -1015,7 +1015,7 @@
         "Name": "The List",
         "Order": 1,
         "CollectorNumber": "DDP-10",
-        "Rarity": "Uncommon",
+        "Rarity": "uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/9/4/9499b38f-5030-4348-a0ff-9002b0e46f2a.jpg"
         ],
@@ -1066,7 +1066,7 @@
         "Name": "Rise of the Eldrazi",
         "Order": 1,
         "CollectorNumber": "51",
-        "Rarity": "Mythic",
+        "Rarity": "mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/6/b/6b007f42-9ec2-466b-8d6b-1d55c516080b.jpg"
         ],
@@ -1107,7 +1107,7 @@
         "Name": "Kamigawa: Neon Dynasty",
         "Order": 1,
         "CollectorNumber": "221",
-        "Rarity": "Mythic",
+        "Rarity": "mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/8/e/8e910464-329a-4de1-930a-be85b1956676.jpg",
           "https://cards.scryfall.io/large/back/8/e/8e910464-329a-4de1-930a-be85b1956676.jpg"
@@ -1218,7 +1218,7 @@
         "Name": "Kaldheim",
         "Order": 1,
         "CollectorNumber": "208",
-        "Rarity": "Uncommon",
+        "Rarity": "uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/d/7/d7de696a-49c2-421d-a86c-bcffd68870c6.jpg"
         ],
@@ -1275,7 +1275,7 @@
         "Name": "Doctor Who",
         "Order": 1,
         "CollectorNumber": "721",
-        "Rarity": "Rare",
+        "Rarity": "rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/3/032adfbd-3898-410c-acf0-79b88f924520.jpg"
         ],
@@ -1299,6 +1299,113 @@
         "Name": "Alien Angel",
         "TypeLine": "Token Artifact Creature — Alien Angel"
       }
+    ],
+    "Power": null,
+    "Toughness": null,
+    "Loyalty": null,
+    "HandModifier": null,
+    "LifeModifier": null
+  },
+  {
+    "OracleId": "8faa4330-07bb-4b65-810a-bbce29d3cd42",
+    "Names": [
+      {
+        "Code": "en",
+        "Value": "Invasion of Alara // Awaken the Maelstrom"
+      }
+    ],
+    "Typelines": [],
+    "Texts": [],
+    "Manacost": "",
+    "Sets": [
+      {
+        "Name": "March of the Machine",
+        "Order": 1,
+        "CollectorNumber": "230",
+        "Rarity": "rare",
+        "ImageUrls": [
+          "https://cards.scryfall.io/large/front/3/1/318c363b-61cc-4e2f-8f86-a4287539ea07.jpg",
+          "https://cards.scryfall.io/large/back/3/1/318c363b-61cc-4e2f-8f86-a4287539ea07.jpg"
+        ],
+        "Flavors": [
+          {
+            "FaceId": 0,
+            "Artist": "Mathias Kollros",
+            "FlavorText": "",
+            "FlavorName": ""
+          },
+          {
+            "FaceId": 1,
+            "Artist": "Mathias Kollros",
+            "FlavorText": "",
+            "FlavorName": ""
+          }
+        ]
+      }
+    ],
+    "CardFaces": [
+      {
+        "FaceId": 0,
+        "Manacost": "{W}{U}{B}{R}{G}",
+        "Names": [
+          {
+            "Code": "en",
+            "Value": "Invasion of Alara"
+          }
+        ],
+        "Typelines": [
+          {
+            "Code": "en",
+            "Value": "Battle — Siege"
+          }
+        ],
+        "Texts": [
+          {
+            "Code": "en",
+            "Value": "When Invasion of Alara enters, exile cards from the top of your library until you exile two nonland cards with mana value 4 or less. You may cast one of those two cards without paying its mana cost. Put one of them into your hand. Then put the other cards exiled this way on the bottom of your library in a random order."
+          }
+        ],
+        "Power": null,
+        "Toughness": null,
+        "Loyalty": null,
+        "Defense": 7
+      },
+      {
+        "FaceId": 1,
+        "Manacost": "",
+        "Names": [
+          {
+            "Code": "en",
+            "Value": "Awaken the Maelstrom"
+          }
+        ],
+        "Typelines": [
+          {
+            "Code": "en",
+            "Value": "Sorcery"
+          }
+        ],
+        "Texts": [
+          {
+            "Code": "en",
+            "Value": "Awaken the Maelstrom is all colors.\nTarget player draws two cards. You may put an artifact card from your hand onto the battlefield. Create a token that's a copy of a permanent you control. Distribute three +1/+1 counters among one, two, or three creatures you control. Destroy target permanent an opponent controls."
+          }
+        ],
+        "Power": null,
+        "Toughness": null,
+        "Loyalty": null,
+        "Defense": null
+      }
+    ],
+    "RelatedCards": [
+      {
+        "Component": "Token",
+        "Name": "Copy",
+        "TypeLine": "Token"
+      }
+    ],
+    "Languages": [
+      "en"
     ],
     "Power": null,
     "Toughness": null,

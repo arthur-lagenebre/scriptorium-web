@@ -7,6 +7,6 @@
         <ct-text [card$]="currentCard$" [language]="currentLanguage" [selectedSet]="selectedSet"></ct-text>
     </div>
     <div class="flex-child">
-        <ct-sets [card$]="currentCard$" [language]="currentLanguage" [selectedSet]="selectedSet"></ct-sets>
+        <ct-sets [card$]="currentCard$" [language]="currentLanguage" [selectedSet]="selectedSet" (updatedSetEvent)="UpdateSetId($event)"></ct-sets>
     </div>
 </div>

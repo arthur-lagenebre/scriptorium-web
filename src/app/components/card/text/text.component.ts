@@ -41,6 +41,7 @@ export class TextComponent {
 
     result = this.ReplaceReturnLine(result);
     result = this.ReplaceMana(result);
+    result = this.ReplaceBracket(result);
 
     if (typeline.includes("Planeswalker")) {
       result = this.ReplaceLoyalty(result);
@@ -53,6 +54,17 @@ export class TextComponent {
     }
 
     return result;
+  }
+
+  ReplaceBracket(text: string): string {
+    let regex = /\(.*\)/gi;
+    let match;
+    
+    while ((match = regex.exec(text)) !== null) {
+      console.log(match);
+      text = text.replace(match[0], '<i>' + match[0] + '</i>');
+    }  
+    return text;
   }
 
   ReplaceSaga(text: string): string {
@@ -81,7 +93,6 @@ export class TextComponent {
     let prevValue = 0;
 
     for (let i = s.length - 1; i >= 0; i--) {
-
       const currentValue = roman[s[i]];
 
       if (currentValue < prevValue) {
@@ -145,7 +156,7 @@ export class TextComponent {
     let match;
 
     while ((match = regex.exec(text)) !== null) {
-      text = text.replace(match[0], '<i class="ms ms-level ms-3x"><span>' + match[1] + '</span></i>');
+      text = text.replace(match[0], '<i class="ms ms-level ms-4x"><span>' + match[1] + '</span></i>');
     }
 
     return text;
