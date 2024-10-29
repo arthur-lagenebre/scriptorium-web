@@ -23,6 +23,7 @@
     "Sets": [
       {
         "Name": "Bloomburrow",
+        "Code": "BLB",
         "Order": 1,
         "CollectorNumber": "280",
         "Rarity": "common",
@@ -40,6 +41,7 @@
       },
       {
         "Name": "Murders at Karlov Manor",
+        "Code": "MKM",
         "Order": 2,
         "CollectorNumber": "276",
         "Rarity": "common",
@@ -91,6 +93,7 @@
     "Sets": [
       {
         "Name": "Time Spiral",
+        "Code": "TSP",
         "Order": 1,
         "CollectorNumber": "157",
         "Rarity": "uncommon",
@@ -142,6 +145,7 @@
     "Sets": [
       {
         "Name": "Zendikar",
+        "Code": "ZEN",
         "Order": 1,
         "CollectorNumber": "21",
         "Rarity": "common",
@@ -193,6 +197,7 @@
     "Sets": [
       {
         "Name": "Commander 2017",
+        "Code": "C17",
         "Order": 1,
         "CollectorNumber": "73",
         "Rarity": "rare",
@@ -244,6 +249,7 @@
     "Sets": [
       {
         "Name": "Modern Masters 2015 Tokens",
+        "Code": "TMM2",
         "Order": 1,
         "CollectorNumber": "5",
         "Rarity": "common",
@@ -431,6 +437,7 @@
     "Sets": [
       {
         "Name": "30th Anniversary Edition",
+        "Code": "30A",
         "Order": 1,
         "CollectorNumber": "224",
         "Rarity": "rare",
@@ -448,6 +455,7 @@
       },
       {
         "Name": "Ninth Edition",
+        "Code": "9ED",
         "Order": 2,
         "CollectorNumber": "281",
         "Rarity": "uncommon",
@@ -465,6 +473,7 @@
       },
       {
         "Name": "Fourth Edition",
+        "Code": "4ED",
         "Order": 3,
         "CollectorNumber": "229",
         "Rarity": "rare",
@@ -482,6 +491,7 @@
       },
       {
         "Name": "Revised Edition",
+        "Code": "3ED",
         "Order": 4,
         "CollectorNumber": "229",
         "Rarity": "rare",
@@ -528,6 +538,7 @@
     "Sets": [
       {
         "Name": "Wilds of Eldraine",
+        "Code": "WOE",
         "Order": 1,
         "CollectorNumber": "63",
         "Rarity": "common",
@@ -644,6 +655,7 @@
     "Sets": [
       {
         "Name": "The List",
+        "Code": "PLST",
         "Order": 1,
         "CollectorNumber": "MRD-284",
         "Rarity": "uncommon",
@@ -661,6 +673,7 @@
       },
       {
         "Name": "Tempest Remastered",
+        "Code": "TPR",
         "Order": 2,
         "CollectorNumber": "245",
         "Rarity": "uncommon",
@@ -678,6 +691,7 @@
       },
       {
         "Name": "World Championship Decks 1998",
+        "Code": "WC98",
         "Order": 3,
         "CollectorNumber": "rb327",
         "Rarity": "uncommon",
@@ -729,6 +743,7 @@
     "Sets": [
       {
         "Name": "Ikoria: Lair of Behemoths",
+        "Code": "IKO",
         "Order": 1,
         "CollectorNumber": "179",
         "Rarity": "mythic",
@@ -746,6 +761,7 @@
       },
       {
         "Name": "Ikoria: Lair of Behemoths",
+        "Code": "IKO",
         "Order": 2,
         "CollectorNumber": "378",
         "Rarity": "mythic",
@@ -797,6 +813,7 @@
     "Sets": [
       {
         "Name": "Vanguard Series",
+        "Code": "PVAN",
         "Order": 1,
         "CollectorNumber": "201",
         "Rarity": "rare",
@@ -848,6 +865,7 @@
     "Sets": [
       {
         "Name": "Ravnica Allegiance",
+        "Code": "RNA",
         "Order": 1,
         "CollectorNumber": "265",
         "Rarity": "mythic",
@@ -956,6 +974,7 @@
     "Sets": [
       {
         "Name": "The List",
+        "Code": "PLST",
         "Order": 1,
         "CollectorNumber": "M20-2",
         "Rarity": "mythic",
@@ -1013,6 +1032,7 @@
     "Sets": [
       {
         "Name": "The List",
+        "Code": "PLST",
         "Order": 1,
         "CollectorNumber": "DDP-10",
         "Rarity": "uncommon",
@@ -1064,6 +1084,7 @@
     "Sets": [
       {
         "Name": "Rise of the Eldrazi",
+        "Code": "ROE",
         "Order": 1,
         "CollectorNumber": "51",
         "Rarity": "mythic",
@@ -1105,6 +1126,7 @@
     "Sets": [
       {
         "Name": "Kamigawa: Neon Dynasty",
+        "Code": "NEO",
         "Order": 1,
         "CollectorNumber": "221",
         "Rarity": "mythic",
@@ -1216,6 +1238,7 @@
     "Sets": [
       {
         "Name": "Kaldheim",
+        "Code": "KHM",
         "Order": 1,
         "CollectorNumber": "208",
         "Rarity": "uncommon",
@@ -1273,6 +1296,7 @@
     "Sets": [
       {
         "Name": "Doctor Who",
+        "Code": "WHO",
         "Order": 1,
         "CollectorNumber": "721",
         "Rarity": "rare",
@@ -1320,6 +1344,7 @@
     "Sets": [
       {
         "Name": "March of the Machine",
+        "Code": "MOM",
         "Order": 1,
         "CollectorNumber": "230",
         "Rarity": "rare",

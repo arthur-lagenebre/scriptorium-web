@@ -1,9 +1,7 @@
 @if (card$ |async; as card) {
     <div class="set-text">
         <div class="text-element">
-            <span>{{GetSetName(card.Sets)}}</span>
-            <br />
-            <span>#{{GetCollectionNumber(card.Sets)}} · {{GetRarity(card.Sets)}}</span>
+            <span [innerHTML]="GetSetCode(card.Sets)"></span><span>{{GetSetName(card.Sets)}}</span> · <span>#{{GetCollectionNumber(card.Sets)}}</span>
         </div>
         <div class="text-element">
             <span class="title">Prints</span>

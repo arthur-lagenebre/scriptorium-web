@@ -21,6 +21,16 @@ export class SetsComponent {
     this.updatedSetEvent.emit(id);
   }
 
+  GetSetCode(sets: CardSet[]): string {
+    let set = sets.find(x => x.Order === this.selectedSet);
+
+    if (set === undefined) {
+      return "";
+    }
+
+    return '<i class="ss ss-' + set.Code.toLowerCase() + ' ss-' + set.Rarity + ' ss-fw ss-2x"></i>';
+  }
+
   GetSetName(sets: CardSet[]): string {
     return sets.find(x => x.Order === this.selectedSet)?.Name || "";
   }
