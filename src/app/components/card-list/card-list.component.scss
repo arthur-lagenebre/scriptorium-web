@@ -9,8 +9,12 @@
 .flex-child {
     flex: 1;
     max-width: 250px;
+    margin: 0.25em;
 }
 
 .card-image {
     max-width: 250px;
+    border-radius: 5%;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    background-image: repeating-linear-gradient(-55deg, #DDD, #DDD 5px, #CCC 5px, #CCC 10px);
 }
