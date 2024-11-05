@@ -22,13 +22,10 @@ export class SetsComponent {
   }
 
   GetSetCode(sets: CardSet[]): string {
-    let set = sets.find(x => x.Order === this.selectedSet);
+    const set = sets.find(x => x.Order === this.selectedSet);
 
-    if (set === undefined) {
-      return "";
-    }
-
-    return '<i class="ss ss-' + set.Code.toLowerCase() + ' ss-' + set.Rarity + ' ss-fw ss-2x"></i>';
+    return !set ? '' 
+      : `<i class="ss ss-${set.Code.toLowerCase()} ss-${set.Rarity} ss-fw ss-2x"></i>`;
   }
 
   GetSetName(sets: CardSet[]): string {

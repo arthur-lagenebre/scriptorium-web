@@ -29,9 +29,11 @@ export class TextComponent {
     let result: string = "";
     let regex = /{(\w|\/)+}/gi;
     let match;
+    
     while ((match = regex.exec(manaCost)) !== null) {
-      result += '<i class="ms ms-'+ match[0].substring(1, match[0].length-1).toLocaleLowerCase() + ' ms-cost ms-shadow"></i>';
+      result += `<i class="ms ms-${match[0].substring(1, match[0].length-1).toLocaleLowerCase()} ms-cost ms-shadow"></i>`;
     }
+
     return result !== "" ? "&nbsp;&nbsp;" + result : "";
   }
 
@@ -62,7 +64,7 @@ export class TextComponent {
     
     while ((match = regex.exec(text)) !== null) {
       console.log(match);
-      text = text.replace(match[0], '<i>' + match[0] + '</i>');
+      text = text.replace(match[0], `<i>${match[0]}</i>`);
     }  
     return text;
   }
@@ -72,22 +74,14 @@ export class TextComponent {
     let match;
     
     while ((match = regex.exec(text)) !== null) {
-      text = text.replace(match[0], '<i class="ms ms-saga ms-2x ms-saga-'+ this.RomanToInt(match[1]) + '"></i>');
+      text = text.replace(match[0], `<i class="ms ms-saga ms-2x ms-saga-${this.RomanToInt(match[1])}"></i>`);
     }
 
     return text;
   }
 
   RomanToInt(s: string): number {
-    const roman: { [key: string]: number } = {
-      I: 1,
-      V: 5,
-      X: 10,
-      L: 50,
-      C: 100,
-      D: 500,
-      M: 1000,
-    };
+    const roman: { [key: string]: number } = { I: 1, V: 5 };
 
     let total = 0;
     let prevValue = 0;
@@ -117,7 +111,7 @@ export class TextComponent {
     let match;
     
     while ((match = regex.exec(text)) !== null) {
-      text = text.replace(match[0], '<i class="ms ms-'+ this.GetMana(match[0]) + ' ms-cost ms-shadow"></i>');
+      text = text.replace(match[0], `<i class="ms ms-${this.GetMana(match[0])} ms-cost ms-shadow"></i>`);
     }
 
     return text;
@@ -135,7 +129,7 @@ export class TextComponent {
       let match;
   
       while ((match = regex.exec(text)) !== null) {
-        text = text.replace(match[0], '<i class="ms ms-loyalty-'+ this.GetLoyaltySymbol(match[1]) + ' ms-loyalty-' + match[2] + '"></i>:');
+        text = text.replace(match[0], `<i class="ms ms-loyalty-'${this.GetLoyaltySymbol(match[1])}' ms-loyalty-${match[2]}"></i>:`);
       }
 
       return text;
@@ -152,11 +146,11 @@ export class TextComponent {
   }
 
   ReplaceLevelUp(text: string): string {
-    let regex = /LEVEL (\d{1,2}(\+|-\d{1,2}))/gi;
+    const regex = /LEVEL (\d{1,2}(\+|-\d{1,2}))/gi;
     let match;
 
     while ((match = regex.exec(text)) !== null) {
-      text = text.replace(match[0], '<i class="ms ms-level ms-4x"><span>' + match[1] + '</span></i>');
+      text = text.replace(match[0], `<i class="ms ms-level ms-4x"><span>${match[1]}</span></i>`);
     }
 
     return text;
