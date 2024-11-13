@@ -12,7 +12,7 @@ export const routes: Routes = [
         resolve: { card: cardResolver }
     },
     {
-        path: "card-list",
+        path: "card-list/cardName",
         loadComponent: () => import('./components/card-list/card-list.component').then(c => c.CardListComponent),
     },
     {

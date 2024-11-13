@@ -1,0 +1,11 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+}
+
+.flex-child {
+    flex: 1;
+    max-width: 250px;
+    margin: 0.25em;
+}

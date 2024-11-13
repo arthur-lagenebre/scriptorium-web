@@ -1,7 +1,4 @@
 <div>
-    <mat-form-field appearance="outline">
-        <mat-label>Card Name</mat-label>
-        <input matInput />
-    </mat-form-field>
-    <button mat-raised-button>Search</button>
+    <input type="text" #filter>
+    <button class="primary" type="button" (click)="search(filter.value)">Search</button>
 </div>

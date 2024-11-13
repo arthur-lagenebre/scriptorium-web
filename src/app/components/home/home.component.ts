@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { SearchComponent } from "../shared/search/search.component";
 
 @Component({
   selector: 'ct-home',
   standalone: true,
-  imports: [SearchComponent],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
