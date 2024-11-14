@@ -1,6 +1,6 @@
 [
   {
-    "OracleId": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "Id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
     "Names": [
       {
         "Code": "en",
@@ -26,7 +26,7 @@
         "Code": "BLB",
         "Order": 1,
         "CollectorNumber": "280",
-        "Rarity": "common",
+        "Rarity": "Common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/0/0000419b-0bba-4488-8f7a-6194544ce91e.jpg"
         ],
@@ -44,7 +44,7 @@
         "Code": "MKM",
         "Order": 2,
         "CollectorNumber": "276",
-        "Rarity": "common",
+        "Rarity": "Common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/8/1/8126b842-ea58-4988-8b3f-0394cf766b91.jpg"
         ],
@@ -70,7 +70,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "44623693-51d6-49ad-8cd7-140505caf02f",
+    "Id": "44623693-51d6-49ad-8cd7-140505caf02f",
     "Names": [
       {
         "Code": "en",
@@ -96,7 +96,7 @@
         "Code": "TSP",
         "Order": 1,
         "CollectorNumber": "157",
-        "Rarity": "uncommon",
+        "Rarity": "Uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/a/8/a8a64329-09fc-4e0d-b7d1-378635f2801a.jpg"
         ],
@@ -122,7 +122,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "8ae3562f-28b7-4462-96ed-be0cf7052ccc",
+    "Id": "8ae3562f-28b7-4462-96ed-be0cf7052ccc",
     "Names": [
       {
         "Code": "en",
@@ -148,7 +148,7 @@
         "Code": "ZEN",
         "Order": 1,
         "CollectorNumber": "21",
-        "Rarity": "common",
+        "Rarity": "Common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/0/00006596-1166-4a79-8443-ca9f82e6db4e.jpg"
         ],
@@ -174,7 +174,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "30cd69a8-7893-4075-94ca-04450ff821d3",
+    "Id": "30cd69a8-7893-4075-94ca-04450ff821d3",
     "Names": [
       {
         "Code": "fr",
@@ -200,7 +200,7 @@
         "Code": "C17",
         "Order": 1,
         "CollectorNumber": "73",
-        "Rarity": "rare",
+        "Rarity": "Rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/9/3/93fb7e08-ff15-49b9-bed8-0faadfa8338f.jpg"
         ],
@@ -226,7 +226,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "dc4e2134-f0c2-49aa-9ea3-ebf83af1445c",
+    "Id": "dc4e2134-f0c2-49aa-9ea3-ebf83af1445c",
     "Names": [
       {
         "Code": "en",
@@ -252,7 +252,7 @@
         "Code": "TMM2",
         "Order": 1,
         "CollectorNumber": "5",
-        "Rarity": "common",
+        "Rarity": "Common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/7/e/7ebb3b03-943e-4b5a-be04-f59316b81333.jpg"
         ],
@@ -354,7 +354,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "5aa12aff-db3c-4be5-822b-3afdf536b33e",
+    "Id": "5aa12aff-db3c-4be5-822b-3afdf536b33e",
     "Names": [
       {
         "Code": "en",
@@ -440,7 +440,7 @@
         "Code": "30A",
         "Order": 1,
         "CollectorNumber": "224",
-        "Rarity": "rare",
+        "Rarity": "Rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/5/0/50d61242-dc24-4083-a078-81e932721fd8.jpg"
         ],
@@ -458,7 +458,7 @@
         "Code": "9ED",
         "Order": 2,
         "CollectorNumber": "281",
-        "Rarity": "uncommon",
+        "Rarity": "Uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/9/1/91173ce1-62a9-4d0e-8b2a-9bc33858c4fc.jpg"
         ],
@@ -476,7 +476,7 @@
         "Code": "4ED",
         "Order": 3,
         "CollectorNumber": "229",
-        "Rarity": "rare",
+        "Rarity": "Rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/5/0547a390-ceee-4b8a-9d0e-36d8778ec693.jpg"
         ],
@@ -494,7 +494,7 @@
         "Code": "3ED",
         "Order": 4,
         "CollectorNumber": "229",
-        "Rarity": "rare",
+        "Rarity": "Rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/0/00012bd8-ed68-4978-a22d-f450c8a6e048.jpg"
         ],
@@ -525,7 +525,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "396b088d-f9af-4ee1-843f-dbe1633f9cc8",
+    "Id": "396b088d-f9af-4ee1-843f-dbe1633f9cc8",
     "Names": [
       {
         "Code": "en",
@@ -541,7 +541,7 @@
         "Code": "WOE",
         "Order": 1,
         "CollectorNumber": "63",
-        "Rarity": "common",
+        "Rarity": "Common",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/0/0001e77a-7fff-49d2-a55c-42f6fdf6db08.jpg"
         ],
@@ -632,7 +632,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "f3658894-3d3d-4cd4-b0ac-c53e1d08747c",
+    "Id": "f3658894-3d3d-4cd4-b0ac-c53e1d08747c",
     "Names": [
       {
         "Code": "en",
@@ -658,7 +658,7 @@
         "Code": "PLST",
         "Order": 1,
         "CollectorNumber": "MRD-284",
-        "Rarity": "uncommon",
+        "Rarity": "Uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/c/9/c9c34c85-a4ab-4510-9ec2-a8214a4f4414.jpg"
         ],
@@ -676,7 +676,7 @@
         "Code": "TPR",
         "Order": 2,
         "CollectorNumber": "245",
-        "Rarity": "uncommon",
+        "Rarity": "Uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/2/7/27856bc5-4f39-4461-baa0-700442942aff.jpg"
         ],
@@ -694,7 +694,7 @@
         "Code": "WC98",
         "Order": 3,
         "CollectorNumber": "rb327",
-        "Rarity": "uncommon",
+        "Rarity": "Uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/3/b/3bc700c1-7c01-4945-a4f2-0eaa67797168.jpg"
         ],
@@ -720,7 +720,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "e9137b54-3464-4f57-95e3-f94bf2ac854e",
+    "Id": "e9137b54-3464-4f57-95e3-f94bf2ac854e",
     "Names": [
       {
         "Code": "en",
@@ -746,7 +746,7 @@
         "Code": "IKO",
         "Order": 1,
         "CollectorNumber": "179",
-        "Rarity": "mythic",
+        "Rarity": "Mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/c/9/c9f07625-fbd8-4581-8568-eb3cfb2a4c1e.jpg"
         ],
@@ -764,7 +764,7 @@
         "Code": "IKO",
         "Order": 2,
         "CollectorNumber": "378",
-        "Rarity": "mythic",
+        "Rarity": "Mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/4/c/4cf6ca85-0ef5-4104-b0e6-1137c4975579.jpg"
         ],
@@ -790,7 +790,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "3ff4189b-e9c2-4139-b9ab-4cdbaa1ba886",
+    "Id": "3ff4189b-e9c2-4139-b9ab-4cdbaa1ba886",
     "Names": [
       {
         "Code": "en",
@@ -816,7 +816,7 @@
         "Code": "PVAN",
         "Order": 1,
         "CollectorNumber": "201",
-        "Rarity": "rare",
+        "Rarity": "Rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/2/02f6b17c-89bd-47e1-9963-69260d5f2838.jpg"
         ],
@@ -842,7 +842,7 @@
     "LifeModifier": "+6"
   },
   {
-    "OracleId": "a3386efe-d6c5-4853-a4db-61460da3364a",
+    "Id": "a3386efe-d6c5-4853-a4db-61460da3364a",
     "Names": [
       {
         "Code": "en",
@@ -868,7 +868,7 @@
         "Code": "RNA",
         "Order": 1,
         "CollectorNumber": "265",
-        "Rarity": "mythic",
+        "Rarity": "Mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/b/0/b0c7cffe-8751-4da7-8c1c-59f472ef3735.jpg"
         ],
@@ -900,7 +900,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "4e7a8817-1a66-45c3-ade9-eac79b40b89f",
+    "Id": "4e7a8817-1a66-45c3-ade9-eac79b40b89f",
     "Names": [
       {
         "Code": "en",
@@ -923,9 +923,10 @@
     "Sets": [
       {
         "Name": "Eldritch Moon",
+        "Code": "EMN",
         "Order": 1,
         "CollectorNumber": "6",
-        "Rarity": "mythic",
+        "Rarity": "Mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/8/d/8d74a469-c71d-4773-99d3-5456b31df424.jpg"
         ],
@@ -951,7 +952,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "c3974ec7-7af0-4b65-baf6-4c1c4fe8a5c4",
+    "Id": "c3974ec7-7af0-4b65-baf6-4c1c4fe8a5c4",
     "Names": [
       {
         "Code": "en",
@@ -977,7 +978,7 @@
         "Code": "PLST",
         "Order": 1,
         "CollectorNumber": "M20-2",
-        "Rarity": "mythic",
+        "Rarity": "Mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/4/9/49109f9f-c3df-4694-9c80-32fc28169442.jpg"
         ],
@@ -1009,7 +1010,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "8c77f436-81ab-4200-b76d-58b1f91fc3d0",
+    "Id": "8c77f436-81ab-4200-b76d-58b1f91fc3d0",
     "Names": [
       {
         "Code": "en",
@@ -1035,7 +1036,7 @@
         "Code": "PLST",
         "Order": 1,
         "CollectorNumber": "DDP-10",
-        "Rarity": "uncommon",
+        "Rarity": "Uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/9/4/9499b38f-5030-4348-a0ff-9002b0e46f2a.jpg"
         ],
@@ -1061,7 +1062,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "11332981-f06a-48c7-a7b4-fce68e629e82",
+    "Id": "11332981-f06a-48c7-a7b4-fce68e629e82",
     "Names": [
       {
         "Code": "en",
@@ -1087,7 +1088,7 @@
         "Code": "ROE",
         "Order": 1,
         "CollectorNumber": "51",
-        "Rarity": "mythic",
+        "Rarity": "Mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/6/b/6b007f42-9ec2-466b-8d6b-1d55c516080b.jpg"
         ],
@@ -1113,7 +1114,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "5b8be856-c08d-4356-925d-fce843565189",
+    "Id": "5b8be856-c08d-4356-925d-fce843565189",
     "Names": [
       {
         "Code": "en",
@@ -1129,7 +1130,7 @@
         "Code": "NEO",
         "Order": 1,
         "CollectorNumber": "221",
-        "Rarity": "mythic",
+        "Rarity": "Mythic",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/8/e/8e910464-329a-4de1-930a-be85b1956676.jpg",
           "https://cards.scryfall.io/large/back/8/e/8e910464-329a-4de1-930a-be85b1956676.jpg"
@@ -1215,7 +1216,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "54deeeef-be90-4975-9213-8355ddf3ce0c",
+    "Id": "54deeeef-be90-4975-9213-8355ddf3ce0c",
     "Names": [
       {
         "Code": "en",
@@ -1241,7 +1242,7 @@
         "Code": "KHM",
         "Order": 1,
         "CollectorNumber": "208",
-        "Rarity": "uncommon",
+        "Rarity": "Uncommon",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/d/7/d7de696a-49c2-421d-a86c-bcffd68870c6.jpg"
         ],
@@ -1273,7 +1274,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "f5fba11b-7669-40a0-97c7-6cb7c13acedd",
+    "Id": "f5fba11b-7669-40a0-97c7-6cb7c13acedd",
     "Names": [
       {
         "Code": "en",
@@ -1299,7 +1300,7 @@
         "Code": "WHO",
         "Order": 1,
         "CollectorNumber": "721",
-        "Rarity": "rare",
+        "Rarity": "Rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/0/3/032adfbd-3898-410c-acf0-79b88f924520.jpg"
         ],
@@ -1331,7 +1332,7 @@
     "LifeModifier": null
   },
   {
-    "OracleId": "8faa4330-07bb-4b65-810a-bbce29d3cd42",
+    "Id": "8faa4330-07bb-4b65-810a-bbce29d3cd42",
     "Names": [
       {
         "Code": "en",
@@ -1347,7 +1348,7 @@
         "Code": "MOM",
         "Order": 1,
         "CollectorNumber": "230",
-        "Rarity": "rare",
+        "Rarity": "Rare",
         "ImageUrls": [
           "https://cards.scryfall.io/large/front/3/1/318c363b-61cc-4e2f-8f86-a4287539ea07.jpg",
           "https://cards.scryfall.io/large/back/3/1/318c363b-61cc-4e2f-8f86-a4287539ea07.jpg"

@@ -63,7 +63,6 @@ export class TextComponent {
     let match;
     
     while ((match = regex.exec(text)) !== null) {
-      console.log(match);
       text = text.replace(match[0], `<i>${match[0]}</i>`);
     }  
     return text;

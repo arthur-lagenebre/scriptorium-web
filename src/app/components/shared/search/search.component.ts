@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { CardService } from '../../../services/card.service';
 
 @Component({
   selector: 'ct-search',
@@ -16,7 +17,9 @@ export class SearchComponent {
     cardName: new FormControl(null),
   });
   
+  constructor(private cardService: CardService) {}
+  
   search(cardname: string) {
-    console.log(cardname);
+    this.cardService.getCardsByCardName(cardname);
   }
 }

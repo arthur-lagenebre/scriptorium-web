@@ -4,7 +4,7 @@ import { RelatedCard } from "./relatedCard"
 import { CardSet } from "./cardSet"
 
 export interface Card {
-    OracleId: string
+    Id: string
     Names: Language[]
     Typelines: Language[]
     Texts: Language[]

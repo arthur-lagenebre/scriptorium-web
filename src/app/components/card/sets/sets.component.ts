@@ -25,7 +25,7 @@ export class SetsComponent {
     const set = sets.find(x => x.Order === this.selectedSet);
 
     return !set ? '' 
-      : `<i class="ss ss-${set.Code.toLowerCase()} ss-${set.Rarity} ss-fw ss-2x"></i>`;
+      : `<i class="ss ss-${set.Code.toLowerCase()} ss-${set.Rarity.toLowerCase()} ss-fw ss-2x"></i>`;
   }
 
   GetSetName(sets: CardSet[]): string {
