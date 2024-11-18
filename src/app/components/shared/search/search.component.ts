@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CardService } from '../../../services/card.service';
@@ -13,10 +12,6 @@ import { CardService } from '../../../services/card.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchComponent {
-  readonly form = new FormGroup({
-    cardName: new FormControl(null),
-  });
-  
   constructor(private cardService: CardService) {}
   
   search(cardname: string) {

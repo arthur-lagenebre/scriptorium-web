@@ -2,8 +2,8 @@
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    justify-items: center;
     max-width: 1050px;
+    margin: auto;
 }
 
 .flex-child {
@@ -17,4 +17,9 @@
     border-radius: 5%;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
     background-image: repeating-linear-gradient(-55deg, #DDD, #DDD 5px, #CCC 5px, #CCC 10px);
+}
+
+.not-found {
+    text-align: center;
+    vertical-align: middle;
 }

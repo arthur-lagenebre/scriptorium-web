@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { Observable } from 'rxjs';
 import { Card } from '../../../models/card';
 import { CardSet } from "../../../models/cardSet";
 import { Language } from "../../../models/language";
-import { Observable } from 'rxjs';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'ct-text',

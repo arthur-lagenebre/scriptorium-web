@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { ImageComponent } from "../image/image.component";
-import { TextComponent } from "../text/text.component";
-import { SetsComponent } from "../sets/sets.component";
-import { Card } from '../../../models/card';
 import { ActivatedRoute } from '@angular/router';
 import { map, Observable } from 'rxjs';
-import { RouterLink } from "@angular/router";
+import { Card } from '../../../models/card';
+import { ImageComponent } from "../image/image.component";
+import { SetsComponent } from "../sets/sets.component";
+import { TextComponent } from "../text/text.component";
 
 @Component({
   selector: 'ct-details',
   standalone: true,
-  imports: [ImageComponent, TextComponent, SetsComponent, RouterLink],
+  imports: [ImageComponent, TextComponent, SetsComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })

@@ -1,4 +1,4 @@
 <div>
     <input type="text" #filter>
-    <button class="primary" type="button" (click)="search(filter.value)">Search</button>
+    <button class="primary" type="button" (click)="search(filter.value);filter.value=''">Search</button>
 </div>

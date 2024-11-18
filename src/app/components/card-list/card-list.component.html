@@ -1,10 +1,16 @@
 <div>
   <div class="flex-container">
-    <div *ngFor='let card of cards' class="flex-child">
-      <a [routerLink]="['/details', card.Id]">
-        <img class="card-image" title="{{GetCardName(card)}}" alt="{{GetCardName(card)}}" src="{{GetImageUrl(card.Sets)}}">
-      </a>
-    </div>
+    @if (cards.length === 0) {
+      <div class="flex-child">
+        <h1 class="not-found">No cards found</h1>
+      </div>
+    } @else {
+      <div *ngFor='let card of cards' class="flex-child">
+        <a [routerLink]="['/details', card.Id]">
+          <img class="card-image" title="{{GetCardName(card)}}" alt="{{GetCardName(card)}}" src="{{GetImageUrl(card.Sets)}}">
+        </a>
+      </div>
+    }
   </div>
 </div>
 <div *ngIf='errorMessage' class='alert alert-danger'>

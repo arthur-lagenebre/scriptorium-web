@@ -1,14 +1,19 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Card } from '../models/card';
-import { map, Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { Card } from '../models/card';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardService {
-  private cardUrl = '/assets/cards.json';
+  //private cardUrl = '/assets/cards.json';
+  private cardUrl = 'https://localhost:7276/api/CardTutors/';
+
+  private cardsSubject = new BehaviorSubject<Card[]>([]);
+
+  cards$ = this.cardsSubject.asObservable();
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -17,17 +22,22 @@ export class CardService {
   }
 
   getCardsByCardName(cardName: string): void {
-    this.getCards()
-        .pipe(map((Cards: Card[]) => Cards.filter(x => x.Names.find(y => y.Value.includes(cardName)))))
+    if (!cardName) {
+      this.router.navigate(['./']);
+      return;
+    }
+
+    this.http.get<Card[]>(`${this.cardUrl}search/${cardName}`)
         .subscribe(cards => {
-          if (cards.length === 0) { this.router.navigate(['./'])}
           if (cards.length === 1) { this.router.navigate([`./details/${cards[0].Id}`])}
-          if (cards.length > 1) { this.router.navigate(['./card-list']) }
+          else {
+            this.cardsSubject.next(cards);
+            this.router.navigate(['./card-list'])
+          }
         });
   }
 
   getCard(id: string | null): Observable<Card | undefined> {
-      return this.getCards()
-                 .pipe(map((cards: Card[]) => cards.find(x => x.Id === id)));
+      return this.http.get<Card>(`${this.cardUrl}${id}`);
   }
 }
