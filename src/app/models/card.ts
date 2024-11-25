@@ -2,6 +2,7 @@ import { CardFace } from "./cardFace"
 import { Language } from "./language"
 import { RelatedCard } from "./relatedCard"
 import { CardSet } from "./cardSet"
+import { Ruling } from "./ruling"
 
 export interface Card {
     Id: string
@@ -13,6 +14,7 @@ export interface Card {
     Languages: string[]
     CardFaces: CardFace[]
     RelatedCards: RelatedCard[]
+    Rulings: Ruling[]
     Power?: string
     Toughness?: string
     Loyalty?: string

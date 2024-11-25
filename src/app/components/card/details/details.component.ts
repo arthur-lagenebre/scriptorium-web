@@ -5,11 +5,12 @@ import { Card } from '../../../models/card';
 import { ImageComponent } from "../image/image.component";
 import { SetsComponent } from "../sets/sets.component";
 import { TextComponent } from "../text/text.component";
+import { RulingsComponent } from "../rulings/rulings.component";
 
 @Component({
   selector: 'ct-details',
   standalone: true,
-  imports: [ImageComponent, TextComponent, SetsComponent],
+  imports: [ImageComponent, RulingsComponent, SetsComponent, TextComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
