@@ -24,7 +24,7 @@ export class CardListComponent {
   }  
 
   GetImageUrl(sets: CardSet[]): string {
-    return sets.find(x => x.Order === 1)?.ImageUrls[0] || "";
+    return sets.find(x => x.Order === 0)?.ImageUrls[0] || "";
   }
   
   ngOnInit(): void {
