@@ -3,11 +3,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Card } from '../../../models/card';
 import { CardSet } from "../../../models/cardSet";
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @Component({
   selector: 'ct-sets',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollingModule],
   templateUrl: './sets.component.html',
   styleUrl: './sets.component.scss'
 })

@@ -2,17 +2,9 @@
     <div class="ruling-text" *ngIf="card.Rulings.length > 0">
         <div class="text-element">
             <span class="title">Rules information</span>
-            <table>
-                <tbody>
-                    <tr *ngFor='let ruling of card.Rulings' class="border-bottom">
-                        <td>
-                            <span>{{ruling.Rule}}</span>
-                            <br />
-                            <span class="ruling-date">({{ruling.PublishedAt | date:'yyyy/MM/dd'}})</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <cdk-virtual-scroll-viewport itemSize="0" class="viewport-rulings">
+                <div *cdkVirtualFor="let ruling of card.Rulings"><span>{{ruling.Rule}}</span><br /><span class="ruling-date">({{ruling.PublishedAt | date:'yyyy/MM/dd'}})</span></div>
+            </cdk-virtual-scroll-viewport>
         </div>
     </div>
 }

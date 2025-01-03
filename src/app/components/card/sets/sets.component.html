@@ -5,15 +5,9 @@
         </div>
         <div class="text-element">
             <span class="title">Prints</span>
-            <table>
-                <tbody>
-                    <tr *ngFor='let set of card.Sets' [class.current]="set.Order === selectedSet">
-                        <td>
-                            <span (click)="UpdateSetId(set.Order)">{{set.Name}} #{{set.CollectorNumber}}</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <cdk-virtual-scroll-viewport itemSize="0" class="viewport-prints">
+                <div *cdkVirtualFor="let set of card.Sets" [class.current]="set.Order === selectedSet"><span (click)="UpdateSetId(set.Order)">{{set.Name}} #{{set.CollectorNumber}}</span></div>
+            </cdk-virtual-scroll-viewport>
         </div>
         <div class="text-element" *ngIf="card.RelatedCards.length > 0">
             <span class="title">Faces, Tokens, &amp; Other Parts</span>
