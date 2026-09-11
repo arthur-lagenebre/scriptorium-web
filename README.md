@@ -4,6 +4,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-work%20in%20progress-orange)]()
+[![build](https://github.com/arthur-lagenebre/scriptorium-web/actions/workflows/build.yml/badge.svg)](https://github.com/arthur-lagenebre/scriptorium-web/actions/workflows/build.yml)
 
 > Angular front end for browsing and translating Magic: The Gathering cards in any language.
 > Front Angular pour consulter et traduire les cartes Magic: The Gathering dans toutes les langues.
