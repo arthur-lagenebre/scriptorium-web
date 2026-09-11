@@ -1,0 +1,32 @@
+name: build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # Les .spec.ts actuels sont ceux generes par la CLI : rien a verifier.
+      # A reactiver avec la reecriture Angular 22 (Vitest, pas besoin de navigateur) :
+      # - name: Test
+      #   run: npm test -- --watch=false --browsers=ChromeHeadless
