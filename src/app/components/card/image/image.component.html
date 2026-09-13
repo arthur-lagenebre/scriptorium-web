@@ -1,8 +1,0 @@
-@if (card$ | async; as card) {
-<div *ngFor="let image of GetImageUrl(card.Sets); let index = index">
-    <img class="card-image"
-      title="{{GetCardName(card, index)}}"
-      alt="{{GetCardName(card, index)}}"
-      src="{{image}}">
-</div>
-}

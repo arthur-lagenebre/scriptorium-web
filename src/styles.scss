@@ -1,12 +1,150 @@
-@import "css/mana.min.css";
-@import "css/keyrune.min.css";
+// src/styles.scss
+@use 'styles/tokens';
 
-html, body {
-    margin: 0;
-    height: 100%;
+// Polices d'icônes Magic. Déclarées ici plutôt que dans angular.json
+// pour que leur provenance soit lisible depuis la feuille de styles.
+@use 'mana-font/css/mana.css';
+@use 'keyrune/css/keyrune.css';
+
+// ── Réinitialisation minimale ────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  // Respecte la taille de police choisie par l'utilisateur.
+  font-size: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  background: var(--ink);
+  color: var(--text-on-ink);
+  font-family: var(--font-ui);
+  font-size: var(--size-base);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 600;
+  line-height: var(--leading-tight);
+}
+
+// ── Accessibilité ────────────────────────────────────────────
+// Le focus reste visible partout : c'est le minimum pour une
+// interface de saisie, et @angular/aria gère le reste du clavier.
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+// ── La page ──────────────────────────────────────────────────
+// Toute zone portant du texte de carte, en lecture comme en saisie.
+.page-surface {
+  background: var(--page);
+  color: var(--text-on-page);
+  font-family: var(--font-card);
+  max-inline-size: var(--page-max);
+}
+
+// Les scripts denses ont besoin de plus d'air entre les lignes et
+// ne doivent jamais être coupés selon les règles latines.
+:lang(ja),
+:lang(ko),
+:lang(zh),
+:lang(zhs),
+:lang(zht) {
+  line-height: var(--leading-cjk);
+  word-break: normal;
+  line-break: strict;
+}
+
+// ── Contrôles ────────────────────────────────────────────────
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: var(--text-on-page);
+  background: var(--page);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-control);
+  padding: var(--space-2) var(--space-3);
+
+  &:disabled {
+    background: var(--page-edge);
+    cursor: not-allowed;
+  }
+}
+
+// Le texte de carte se saisit dans la police de la carte : ce qu'on
+// tape ressemble à ce qu'on obtient.
+textarea.card-text {
+  font-family: var(--font-card);
+  line-height: var(--leading-body);
+  min-block-size: 8rem;
+  inline-size: 100%;
+  resize: vertical;
+}
+
+a {
+  color: var(--brass-bright);
+  text-underline-offset: 0.15em;
+}
+
+.ability {
+  margin: 0 0 var(--space-3);
+}
+
+.loyalty-cost,
+.chapter-mark,
+.level-mark {
+  display: inline-block;
+  min-inline-size: 2.4em;
+  margin-inline-end: var(--space-2);
+  padding: 0 var(--space-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-control);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.reminder {
+  color: var(--text-on-page-quiet);
+}
+
+.ms-cost {
+  vertical-align: baseline;
 }

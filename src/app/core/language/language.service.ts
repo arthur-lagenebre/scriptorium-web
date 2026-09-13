@@ -1,0 +1,82 @@
+import { Injectable, computed, signal } from '@angular/core';
+
+/** Codes de langue tels que Scryfall les emploie, avec leur nom natif. */
+export const LANGUAGE_NAMES: Record<string, string> = {
+  en: 'English',
+  es: 'Español',
+  fr: 'Français',
+  de: 'Deutsch',
+  it: 'Italiano',
+  pt: 'Português',
+  ja: '日本語',
+  ko: '한국어',
+  ru: 'Русский',
+  zhs: '简体中文',
+  zht: '繁體中文',
+  he: 'עברית',
+  ar: 'العربية',
+  la: 'Latina',
+  grc: 'Ἑλληνικά',
+  sa: 'संस्कृतम्',
+  ph: 'Phyrexian',
+};
+
+export function languageName(code: string): string {
+  return LANGUAGE_NAMES[code] ?? code;
+}
+
+const RTL = new Set(['he', 'ar']);
+
+export function languageDirection(code: string): 'ltr' | 'rtl' {
+  return RTL.has(code) ? 'rtl' : 'ltr';
+}
+
+const STORAGE_KEY = 'scriptorium.language';
+
+@Injectable({ providedIn: 'root' })
+export class LanguageService {
+  /** Langues dans lesquelles la carte affichée existe. */
+  private readonly _available = signal<string[]>([]);
+  private readonly _selected = signal<string>(this.initial());
+
+  readonly available = this._available.asReadonly();
+  readonly selected = this._selected.asReadonly();
+  readonly direction = computed(() => languageDirection(this._selected()));
+
+  readonly isEditable = computed(() => this._selected() !== 'en');
+
+  setAvailable(languages: string[]): void {
+    this._available.set(languages);
+
+    if (languages.length > 0 && !languages.includes(this._selected())) {
+      this.select(languages.includes('en') ? 'en' : languages[0]);
+    }
+  }
+
+  select(code: string): void {
+    this._selected.set(code);
+    localStorage.setItem(STORAGE_KEY, code);
+  }
+
+  private initial(): string {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored && LANGUAGE_NAMES[stored]) {
+      return stored;
+    }
+
+    for (const tag of navigator.languages ?? []) {
+      const base = tag.toLowerCase();
+
+      if (base.startsWith('zh')) {
+        return base.includes('hant') || base.includes('tw') || base.includes('hk') ? 'zht' : 'zhs';
+      }
+
+      const short = base.split('-')[0];
+      if (LANGUAGE_NAMES[short]) {
+        return short;
+      }
+    }
+
+    return 'en';
+  }
+}
