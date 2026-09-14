@@ -5,7 +5,7 @@ import { languageName } from '../../core/language/language.service';
   selector: 'app-language-rail',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './language-rail.component.html',
-  styleUrl: './language-rail.component.css',
+  styleUrl: './language-rail.component.scss',
 })
 export class LanguageRailComponent {
   readonly languages = input.required<string[]>();

@@ -16,7 +16,7 @@ interface EditorFace {
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [FormField],
   templateUrl: './translation-editor.component.html',
-  styleUrl: './translation-editor.component.css',
+  styleUrl: './translation-editor.component.scss',
 })
 export class TranslationEditorComponent {
   private readonly api = inject(CardApi);

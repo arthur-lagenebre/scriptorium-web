@@ -8,7 +8,7 @@ import { languageName } from '../../core/language/language.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink],
   templateUrl: './search.component.html',
-  styleUrl: './search.component.css',
+  styleUrl: './search.component.scss',
 })
 export class SearchComponent implements OnDestroy {
   private readonly api = inject(CardApi);

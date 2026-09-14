@@ -9,7 +9,7 @@ import { LanguageRailComponent } from './shared/ui/language-rail.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet, RouterLink, LanguageRailComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css',
+  styleUrl: './app.scss',
 })
 export class App {
   readonly auth = inject(AuthService);

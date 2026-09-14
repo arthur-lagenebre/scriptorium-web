@@ -13,7 +13,7 @@ function present(value: string | null): string | null {
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [OracleTextPipe, TranslationEditorComponent],
   templateUrl: './card-view.component.html',
-  styleUrl: './card-view.component.css',
+  styleUrl: './card-view.component.scss',
 })
 export class CardViewComponent {
   private readonly api = inject(CardApi);
