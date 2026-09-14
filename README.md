@@ -21,16 +21,14 @@ Wizards of the Coast translates Magic cards into a handful of languages, and onl
 
 **Scriptorium** lets a community maintain those translations itself. This repository is the part people actually see.
 
-### What works today
+### What it does
 
-- Reading a card in any language it has been translated into
-- A permanent language rail listing exactly the languages that card exists in
-- Multi-face cards — transform, adventure, modal DFC — rendered face by face
+- Search a card by its English name, with the languages it already exists in shown on every result
+- Read it in any of those languages — or in one it does not have yet, which is where the work starts
+- **Write the missing translation**: name, type line and rules text, face by face, signed in with Google or GitHub
+- Multi-face cards — transform, adventure, modal DFC — handled as one form per face
 - Printing selector, with per-printing flavour text and artist
 - Faithful Magic typography: mana symbols, loyalty abilities, saga chapters, level tiers, reminder text
-- Sign-in with Google or GitHub
-
-**Editing is not wired up yet.** The API accepts translations; the screen that submits them is the next milestone.
 
 ### A rewrite, not an upgrade
 
@@ -38,30 +36,35 @@ This front end was rebuilt from scratch on Angular 22, replacing an Angular 18 a
 
 Four successive `ng update` runs would have produced a project carrying Zone.js, Karma and eager change detection under a 2026 version number. Starting over on an application this small was both faster and more honest. The one piece carried over intact is the oracle text renderer, converted from template method calls to a pure pipe.
 
+The editing form is built on Signal Forms. A throwaway spike settled the one uncertainty first — iterating over a variable-length array of fields, needed here because a card has one or two faces depending on its layout.
+
 ### Design
 
-There is no component library here. The interface is hand-written SCSS over a small token system, with `@angular/aria` available for interactive patterns.
+There is no component library here. The interface is hand-written CSS over a small token system, with `@angular/aria` available for interactive patterns.
 
 That is a deliberate choice rather than a preference for extra work. The visually important part of this application — the card itself — is bespoke whatever happens: mana symbols, type line, saga chapters, loyalty. A component kit would only dress the chrome around it, and its recognisable look would fight with the card.
 
-Three rules hold the design together:
+Four rules hold the design together:
 
-**Colour is information, never ornament.** The chrome is a cold slate; the only accent is brass. The five Magic colours exist as tokens, and they are reserved for colour identity and mana symbols. A colour in the interface says something about the card, or it has no business being there. English, for instance, is marked in the language rail by a rule under its code rather than by a tint, because it is not modifiable — and that is not a fact about the card.
+**Colour is information, never ornament.** The chrome is a cold slate; the only accent is brass. The five Magic colours exist as tokens, and they are reserved for colour identity and mana symbols. A colour in the interface says something about the card, or it has no business being there.
 
 **Typography serves twenty-odd scripts.** Noto Sans and Noto Serif were not chosen for their looks: they are the only free family covering every script this platform exists to serve, with Japanese, Korean and Chinese siblings on compatible metrics. Every translated block carries its own `lang` attribute, which drives denser line-height for CJK and switches the layout to right-to-left for Hebrew and Arabic. All spacing uses logical properties, so that flip is automatic.
 
-**What is missing is shown.** A field with no translation in the selected language displays "à traduire" rather than silently falling back to English. On a translation platform, an empty field is the most useful information on the screen: it is the work left to do. Rulings are the one exception — they are almost never translated, and a missing one is not a task.
+**What is missing is shown.** A field with no translation in the selected language displays "à traduire" rather than silently falling back to English. The language rail lists **every** known language, translated ones first and the rest under a heading — because adding a language a card does not have is the whole point of the platform, not an edge case to hide behind a button. Rulings are the one exception: they are almost never translated, and a missing one is not a task.
+
+**Typing looks like the result.** The editing form uses the card's own typeface, so a translator sees the shape of what they are writing without a separate preview.
 
 ### Project layout
 
 ```
 src/app/
 ├── core/
-│   ├── api/         typed client for scriptorium-api
+│   ├── api/         typed client for scriptorium-api, with a local fixture mode
 │   ├── auth/        session signals, bearer interceptor, OAuth callback
-│   └── language/    available and selected language, direction, native names
+│   └── language/    known languages, translation state, direction, native names
 ├── features/
-│   └── card/        card consultation
+│   ├── card/        card consultation and the translation form
+│   └── search/      search by English name
 └── shared/
     ├── pipes/       oracle text renderer
     └── ui/          language rail
@@ -72,8 +75,8 @@ src/styles/_tokens.scss
 
 **Prerequisites**
 
-- Node.js 20+
-- A running instance of [scriptorium-api](https://github.com/arthur-lagenebre/scriptorium-api) with a populated database
+- Node.js 24
+- A running instance of [scriptorium-api](https://github.com/arthur-lagenebre/scriptorium-api) with a populated database, and OAuth applications configured on Google or GitHub
 
 ```bash
 git clone https://github.com/arthur-lagenebre/scriptorium-web.git
@@ -84,7 +87,7 @@ npm start
 
 Then open `http://localhost:4200/`. The API base URL lives in `src/environments/`.
 
-**Running without a backend.** `CardApi` has a `useFixture` flag that reads `public/cards.json` instead of calling the API. The fixture holds 19 cards chosen for their awkward cases: a six-language card, three double-faced cards, a planeswalker, a saga, a leveler. It predates some API fields, so treat it as a rough stand-in rather than a contract.
+**Running without a backend.** `CardApi` has a `useFixture` flag that reads `public/cards.json` instead of calling the API, writes included — edits are applied in memory, so the whole loop can be exercised without a database. The fixture holds 19 cards chosen for their awkward cases: a six-language card, three double-faced cards, a planeswalker, a saga, a leveler. It predates some API fields, so treat it as a rough stand-in rather than a contract.
 
 ```bash
 npm run build
@@ -93,12 +96,13 @@ npm test
 
 ### Roadmap
 
-- [ ] Search screen, so cards are reachable without pasting an identifier
-- [ ] **Translation editing** — the core purpose of the project, and the reason the API exists
-- [ ] Revision history and one-click revert
+- [ ] Revision history and revert, both already exposed by the API
+- [ ] Deleting a translation: an emptied field is sent as null, which leaves the stored value untouched, so there is currently no way to remove one
+- [ ] Warn on concurrent edits rather than letting the last writer win silently
 - [ ] Load the CJK font families on demand: shipping all of them costs several megabytes for a reader who only wants French
 - [ ] Internationalise the interface itself — the labels are hardcoded French, which is ironic for a translation platform
-- [ ] Real tests on the oracle renderer and the face normaliser, which is where the logic lives
+- [ ] Tests on the oracle renderer and the face normaliser, the two pure functions where the logic lives
+- [ ] Search across all languages: today it matches English names only, so a Japanese translator has to know the English title
 - [ ] Drop the fixture flag once the database is populated
 
 ### Related repositories
@@ -119,16 +123,14 @@ Wizards of the Coast ne traduit les cartes Magic que dans quelques langues, et n
 
 **Scriptorium** permet à une communauté de maintenir elle-même ces traductions. Ce dépôt en est la partie visible.
 
-### Ce qui fonctionne aujourd'hui
+### Ce qu'il fait
 
-- La lecture d'une carte dans chacune des langues où elle a été traduite
-- Un rail de langues permanent, listant exactement les langues dans lesquelles la carte existe
-- Les cartes multi-faces — transform, adventure, modal DFC — rendues face par face
+- Rechercher une carte par son nom anglais, chaque résultat indiquant les langues où elle existe déjà
+- La lire dans l'une de ces langues — ou dans une qu'elle n'a pas encore, et c'est là que le travail commence
+- **Écrire la traduction manquante** : nom, ligne de type et texte de règles, face par face, une fois connecté via Google ou GitHub
+- Les cartes multi-faces — transform, adventure, modal DFC — traitées comme un formulaire par face
 - Le sélecteur d'impression, avec texte d'ambiance et artiste propres à chaque édition
 - Une typographie Magic fidèle : symboles de mana, capacités de loyauté, chapitres de saga, paliers de niveau, texte de rappel
-- La connexion via Google ou GitHub
-
-**L'édition n'est pas encore branchée.** L'API accepte les traductions ; l'écran qui les soumet est le prochain jalon.
 
 ### Une réécriture, pas une mise à jour
 
@@ -136,30 +138,35 @@ Ce front a été reconstruit de zéro sur Angular 22, en remplacement d'une appl
 
 Quatre `ng update` successifs auraient produit un projet traînant Zone.js, Karma et la détection eager sous un numéro de version 2026. Sur une application de cette taille, repartir à neuf était à la fois plus rapide et plus honnête. La seule pièce reprise telle quelle est le moteur de rendu du texte oracle, converti d'appels de méthode dans le gabarit en pipe pur.
 
+Le formulaire d'édition repose sur les Signal Forms. Une maquette jetable a d'abord levé la seule incertitude : l'itération sur un tableau de champs de taille variable, nécessaire ici puisqu'une carte a une ou deux faces selon son layout.
+
 ### Le parti pris visuel
 
-Aucune bibliothèque de composants ici. L'interface est écrite à la main en SCSS au-dessus d'un petit système de tokens, avec `@angular/aria` disponible pour les comportements interactifs.
+Aucune bibliothèque de composants ici. L'interface est écrite à la main en CSS au-dessus d'un petit système de tokens, avec `@angular/aria` disponible pour les comportements interactifs.
 
 C'est un choix délibéré, et non un goût du travail supplémentaire. La partie visuellement importante de cette application — la carte elle-même — est du sur-mesure de toute façon : symboles de mana, ligne de type, chapitres de saga, loyauté. Une bibliothèque n'habillerait que le décor autour, et son allure reconnaissable entrerait en concurrence avec la carte.
 
-Trois règles tiennent l'ensemble :
+Quatre règles tiennent l'ensemble :
 
-**La couleur est une information, jamais un ornement.** Le chrome est une ardoise froide, l'unique accent est un laiton. Les cinq couleurs de Magic existent en tokens, et sont réservées à l'identité colorielle et aux symboles de mana. Une couleur dans l'interface dit quelque chose sur la carte, sinon elle n'a rien à y faire. L'anglais, par exemple, se signale dans le rail par un filet sous son code plutôt que par une teinte, parce qu'il n'est pas modifiable — et que ce n'est pas une propriété de la carte.
+**La couleur est une information, jamais un ornement.** Le chrome est une ardoise froide, l'unique accent est un laiton. Les cinq couleurs de Magic existent en tokens, et sont réservées à l'identité colorielle et aux symboles de mana. Une couleur dans l'interface dit quelque chose sur la carte, sinon elle n'a rien à y faire.
 
 **La typographie sert une vingtaine de scripts.** Noto Sans et Noto Serif n'ont pas été choisies pour leur allure : ce sont les seules familles libres couvrant tous les scripts que la plateforme existe pour servir, avec des déclinaisons japonaise, coréenne et chinoise aux métriques compatibles. Chaque bloc traduit porte son propre attribut `lang`, qui déclenche un interligne plus généreux pour les scripts denses et bascule la mise en page en droite-à-gauche pour l'hébreu et l'arabe. Tout l'espacement utilise des propriétés logiques, ce qui rend cette bascule automatique.
 
-**Ce qui manque se voit.** Un champ sans traduction dans la langue choisie affiche « à traduire » plutôt que de retomber silencieusement sur l'anglais. Sur une plateforme de traduction, un champ vide est l'information la plus utile de l'écran : c'est le travail restant. Les rulings font seule exception — ils ne sont quasiment jamais traduits, et leur absence n'est pas une tâche.
+**Ce qui manque se voit.** Un champ sans traduction dans la langue choisie affiche « à traduire » plutôt que de retomber silencieusement sur l'anglais. Le rail liste **toutes** les langues connues, les traduites en tête et les autres sous un titre de groupe — parce qu'ajouter une langue absente est la raison d'être de la plateforme, pas un cas marginal à cacher derrière un bouton. Les rulings font seule exception : ils ne sont quasiment jamais traduits, et leur absence n'est pas une tâche.
+
+**La saisie ressemble au résultat.** Le formulaire emploie la police de la carte, si bien qu'un traducteur voit la forme de ce qu'il écrit sans passer par un aperçu séparé.
 
 ### Organisation
 
 ```
 src/app/
 ├── core/
-│   ├── api/         client typé de scriptorium-api
+│   ├── api/         client typé de scriptorium-api, avec un mode bouchon local
 │   ├── auth/        signaux de session, intercepteur, retour OAuth
-│   └── language/    langues disponibles et choisie, sens d'écriture, noms natifs
+│   └── language/    langues connues, état de traduction, sens d'écriture, noms natifs
 ├── features/
-│   └── card/        consultation d'une carte
+│   ├── card/        consultation d'une carte et formulaire de traduction
+│   └── search/      recherche par nom anglais
 └── shared/
     ├── pipes/       rendu du texte oracle
     └── ui/          rail de langues
@@ -170,8 +177,8 @@ src/styles/_tokens.scss
 
 **Prérequis**
 
-- Node.js 20+
-- Une instance de [scriptorium-api](https://github.com/arthur-lagenebre/scriptorium-api) en cours d'exécution, avec une base peuplée
+- Node.js 24
+- Une instance de [scriptorium-api](https://github.com/arthur-lagenebre/scriptorium-api) en cours d'exécution avec une base peuplée, et des applications OAuth configurées chez Google ou GitHub
 
 ```bash
 git clone https://github.com/arthur-lagenebre/scriptorium-web.git
@@ -182,7 +189,7 @@ npm start
 
 Puis ouvrir `http://localhost:4200/`. L'URL de base de l'API se trouve dans `src/environments/`.
 
-**Travailler sans backend.** `CardApi` porte un indicateur `useFixture` qui lit `public/cards.json` au lieu d'appeler l'API. Ce jeu de test contient 19 cartes choisies pour leurs cas difficiles : une carte en six langues, trois cartes double face, un planeswalker, une saga, un leveler. Il est antérieur à certains champs de l'API : à traiter comme un substitut approximatif, pas comme un contrat.
+**Travailler sans backend.** `CardApi` porte un indicateur `useFixture` qui lit `public/cards.json` au lieu d'appeler l'API, écritures comprises : les modifications sont appliquées en mémoire, si bien que le circuit complet s'éprouve sans base de données. Ce jeu de test contient 19 cartes choisies pour leurs cas difficiles : une carte en six langues, trois cartes double face, un planeswalker, une saga, un leveler. Il est antérieur à certains champs de l'API : à traiter comme un substitut approximatif, pas comme un contrat.
 
 ```bash
 npm run build
@@ -191,12 +198,13 @@ npm test
 
 ### Feuille de route
 
-- [ ] Écran de recherche, pour atteindre une carte sans coller un identifiant
-- [ ] **Édition des traductions** — la raison d'être du projet, et celle pour laquelle l'API existe
-- [ ] Historique des révisions et annulation en un geste
+- [ ] Historique des révisions et annulation, tous deux déjà exposés par l'API
+- [ ] Suppression d'une traduction : un champ vidé part à null, ce qui laisse la valeur stockée intacte, si bien qu'aucun moyen ne permet aujourd'hui d'en retirer une
+- [ ] Signaler les modifications concurrentes plutôt que de laisser le dernier arrivé gagner en silence
 - [ ] Charger les déclinaisons CJK des polices à la demande : les embarquer toutes coûte plusieurs mégaoctets à un lecteur qui ne veut que du français
 - [ ] Internationaliser l'interface elle-même — les libellés sont en français codé en dur, ce qui est ironique pour une plateforme de traduction
-- [ ] De vrais tests sur le rendu du texte oracle et sur la normalisation des faces, là où se trouve la logique
+- [ ] Des tests sur le rendu du texte oracle et sur la normalisation des faces, les deux fonctions pures où se trouve la logique
+- [ ] Rechercher dans toutes les langues : aujourd'hui seuls les noms anglais sont interrogés, si bien qu'un traducteur japonais doit connaître le titre anglais
 - [ ] Retirer l'indicateur de jeu de test une fois la base peuplée
 
 ### Dépôts liés
