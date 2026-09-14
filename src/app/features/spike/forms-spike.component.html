@@ -1,0 +1,20 @@
+<section class="spike">
+  <h1>Maquette Signal Forms</h1>
+
+  <label for="name">Nom de la carte</label>
+  <input id="name" type="text" [formField]="f.name" />
+
+  <label for="text">Texte de règles</label>
+  <textarea id="text" rows="4" [formField]="f.text"></textarea>
+
+  <h2>Faces</h2>
+  @for (face of f.faces; track $index) {
+    <label>Face {{ $index }}</label>
+    <input type="text" [formField]="face.value" />
+  }
+
+  <button type="button" (click)="addFace()">Ajouter une face</button>
+
+  <h2>État</h2>
+  <pre>{{ debug() }}</pre>
+</section>

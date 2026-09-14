@@ -1,0 +1,104 @@
+.editor {
+  position: sticky;
+  inset-block-start: var(--space-4);
+}
+
+h2 {
+  margin-block-end: var(--space-4);
+  font-size: var(--size-sm);
+  font-weight: 600;
+  color: var(--text-on-ink-quiet);
+}
+
+.locked {
+  padding: var(--space-4);
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius-control);
+  font-size: var(--size-sm);
+  color: var(--text-on-ink-quiet);
+}
+
+fieldset {
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  padding: 0;
+  margin-block-end: var(--space-2);
+  font-size: var(--size-xs);
+  color: var(--text-on-ink-quiet);
+}
+
+label {
+  display: block;
+  margin-block: var(--space-3) var(--space-1);
+  font-size: var(--size-xs);
+  color: var(--text-on-ink-quiet);
+}
+
+.optional {
+  font-style: italic;
+}
+
+input,
+textarea {
+  inline-size: 100%;
+}
+
+/* La saisie emploie la police de la carte : ce qu'on tape ressemble
+   à ce qu'on obtient, sans passer par un aperçu. */
+.card-input {
+  font-family: var(--font-card);
+}
+
+.hint {
+  margin-block: var(--space-1) 0;
+  font-size: var(--size-xs);
+  color: var(--text-on-ink-quiet);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-start: var(--space-6);
+}
+
+.actions button {
+  padding: var(--space-2) var(--space-4);
+  border-color: var(--ink-line);
+  color: var(--text-on-ink);
+}
+
+.actions button:hover:not(:disabled) {
+  border-color: var(--brass);
+}
+
+.actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  background: var(--brass);
+  border-color: var(--brass);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--brass-bright);
+  border-color: var(--brass-bright);
+}
+
+.status {
+  margin-block-start: var(--space-4);
+  font-size: var(--size-sm);
+  color: var(--ok);
+}
+
+.status.is-error {
+  color: var(--danger);
+}

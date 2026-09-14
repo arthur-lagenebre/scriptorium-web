@@ -1,0 +1,39 @@
+<section class="editor">
+  <h2>Traduire en {{ fullLanguage() }}</h2>
+
+  @if (language() === 'en') {
+    <p class="locked">Le texte anglais est celui publié par Wizards of the Coast. Il est réimporté à chaque mise à jour, si bien qu'une correction y serait écrasée. Choisissez une autre langue pour contribuer.</p>
+  } @else if (!auth.isAuthenticated()) {
+    <p class="locked">Connectez-vous pour proposer une traduction. Vos contributionsseront signées de votre nom et resteront visibles dans l'historique.</p>
+  } @else {
+    @for (face of f.faces; track $index) {
+      <fieldset>
+        @if (faceCount() > 1) {
+          <legend>Face {{ $index + 1 }} sur {{ faceCount() }}</legend>
+        }
+
+        <label [for]="'name-' + $index">Nom</label>
+        <input [id]="'name-' + $index" type="text" class="card-input" [attr.lang]="language()" [formField]="face.name" />
+
+        <label [for]="'typeline-' + $index">Ligne de type</label>
+        <input [id]="'typeline-' + $index" type="text" class="card-input" [attr.lang]="language()" [formField]="face.typeline" />
+
+        <label [for]="'text-' + $index">Texte de règles</label>
+        <textarea [id]="'text-' + $index" class="card-text" rows="6" [attr.lang]="language()" [formField]="face.text"></textarea>
+      </fieldset>
+    }
+
+    <label for="comment">Note de contribution <span class="optional">facultative</span></label>
+    <input id="comment" type="text" [formField]="f.comment" />
+    <p class="hint">Expliquez votre choix si la traduction est discutable.</p>
+
+    <div class="actions">
+      <button type="button" class="primary" [disabled]="!dirty() || saving()" (click)="save()">{{ saving() ? 'Enregistrement…' : 'Enregistrer' }}</button>
+      <button type="button" [disabled]="!dirty() || saving()" (click)="reset()">Annuler les modifications</button>
+    </div>
+
+    @if (message(); as note) {
+      <p class="status" [class.is-error]="failed()">{{ note }}</p>
+    }
+  }
+</section>

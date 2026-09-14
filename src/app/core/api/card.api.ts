@@ -3,7 +3,6 @@ import { Injectable, inject } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
-/** Une valeur traduite, telle que l'API les renvoie : un tableau, pas un dictionnaire. */
 export interface LanguageValue {
   code: string;
   value: string;
@@ -68,7 +67,6 @@ export interface CardTutor {
   lifeModifier: string | null;
 }
 
-/** Ce que l'écran affiche : une face, quelle que soit la structure d'origine. */
 export interface DisplayFace {
   faceId: number;
   manaCost: string;
@@ -108,18 +106,10 @@ export interface RevisionView {
   userDisplayName: string;
 }
 
-/** Valeur dans la langue demandée, sans repli silencieux sur l'anglais. */
 export function valueIn(values: LanguageValue[], language: string): string | null {
   return values.find(v => v.code === language)?.value ?? null;
 }
 
-/**
- * Aplanit une carte en faces affichables.
- *
- * Une carte simple porte ses traductions à la racine et `cardFaces` vide ;
- * une carte à deux faces a l'inverse. Le reste de l'interface n'a pas à
- * connaître cette différence.
- */
 export function toDisplayFaces(card: CardTutor, language: string): DisplayFace[] {
   if (card.cardFaces.length > 0) {
     return card.cardFaces
@@ -156,7 +146,6 @@ export class CardApi {
   private readonly http = inject(HttpClient);
   private readonly base = `${environment.apiBaseUrl}/api`;
 
-  /** Bascule temporaire sur le jeu de test tant que la base n'est pas peuplée. */
   private readonly useFixture = true;
 
   private fixture?: Promise<CardTutor[]>;
@@ -170,7 +159,8 @@ export class CardApi {
     if (this.useFixture) {
       const cards = await this.loadFixture();
       const found = cards.find(c => c.id === id);
-      if (!found) throw new Error(`Carte introuvable dans le jeu de test : ${id}`);
+      if (!found)
+        throw new Error(`Carte introuvable dans le jeu de test : ${id}`);
       return found;
     }
 
@@ -194,19 +184,51 @@ export class CardApi {
       this.http.get<TranslationView>(`${this.base}/cards/${cardId}/translations/${language}`)
     );
   }
+  
+  async saveTranslation(cardId: string, language: string, faces: TranslationFace[], comment: string | null): Promise<{ revisions: number }> {
+    if (this.useFixture) {
+      const cards = await this.loadFixture();
+      const card = cards.find(c => c.id === cardId);
+      if (!card) throw new Error('Carte introuvable');
 
-  saveTranslation(
-    cardId: string,
-    language: string,
-    faces: TranslationFace[],
-    comment: string | null
-  ): Promise<{ revisions: number }> {
-    return firstValueFrom(
-      this.http.put<{ revisions: number }>(
-        `${this.base}/cards/${cardId}/translations/${language}`,
-        { faces, comment }
-      )
-    );
+      let revisions = 0;
+      const put = (values: LanguageValue[], value: string | null) => {
+        if (value === null)
+          return;
+
+        const existing = values.find(v => v.code === language);
+
+        if (existing) {
+          if (existing.value !== value)
+            {
+              existing.value = value;
+              revisions++;
+            }
+        } else {
+          values.push({ code: language, value });
+          revisions++;
+        }
+      };
+
+      for (const face of faces) {
+        const target = card.cardFaces.length > 0 ? card.cardFaces.find(f => f.faceId === face.faceId) : card;
+
+        if (!target)
+          continue;
+
+        put(target.names, face.name);
+        put(target.typelines, face.typeline);
+        put(target.texts, face.text);
+      }
+
+      if (revisions > 0 && !card.languages.includes(language)) {
+        card.languages.push(language);
+      }
+
+      return { revisions };
+    }
+
+    return firstValueFrom(this.http.put<{ revisions: number }>(`${this.base}/cards/${cardId}/translations/${language}`, { faces, comment }));
   }
 
   getHistory(cardId: string, language?: string): Promise<RevisionView[]> {

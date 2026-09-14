@@ -1,0 +1,95 @@
+@if (error()) {
+  <p class="notice">Cette carte est introuvable.</p>
+} @else if (card(); as loaded) {
+  <article class="card-view">
+    @if (printing(); as set) {
+      @if (set.imageUrls.length > 0) {
+        <figure class="art">
+          <img [src]="set.imageUrls[0]" [alt]="englishName(loaded)" loading="lazy">
+        </figure>
+      }
+    }
+
+    <div class="faces">
+      @for (face of faces(); track face.faceId) {
+        <section class="page-surface face" [attr.lang]="language.selected()">
+          <header class="face-head">
+            @if (face.name) {
+              <h1>{{ face.name }}</h1>
+            } @else {
+              <h1 class="untranslated">Nom à traduire</h1>
+            }
+            @if (face.manaCost) {
+              <span class="cost" [innerHTML]="face.manaCost | oracleText"></span>
+            }
+          </header>
+
+          @if (face.typeline) {
+            <p class="typeline">{{ face.typeline }}</p>
+          } @else {
+            <p class="typeline untranslated">Ligne de type à traduire</p>
+          }
+
+          @if (face.text) {
+            <div class="rules" [innerHTML]="face.text | oracleText"></div>
+          } @else {
+            <p class="untranslated">Texte de règles à traduire</p>
+          }
+
+          @if (flavorFor(face.faceId); as flavor) {
+            @if (flavor.flavorText) {
+              <p class="flavor">{{ flavor.flavorText }}</p>
+            }
+          }
+
+          <footer class="face-foot">
+            @if (stats(face); as line) {
+              <span class="stats">{{ line }}</span>
+            }
+            @if (flavorFor(face.faceId); as flavor) {
+              @if (flavor.artist) {
+                <span class="artist">{{ flavor.artist }}</span>
+              }
+            }
+          </footer>
+        </section>
+      }
+    </div>
+
+    <aside class="meta">
+      <app-translation-editor [cardId]="loaded.id" [language]="language.selected()" [faces]="faces()" (saved)="reload()" />
+      <h2>Impressions</h2>
+      <ul class="printings">
+        @for (set of loaded.sets; track set.code + set.collectorNumber) {
+          <li>
+            <button type="button" [class.is-selected]="set === printing()" (click)="selectPrinting(set)">
+              <i [class]="'ss ss-' + set.code.toLowerCase()" aria-hidden="true"></i>
+              <span>{{ set.name }}</span>
+              <span class="collector">{{ set.collectorNumber }} · {{ set.rarity }}</span>
+            </button>
+          </li>
+        }
+      </ul>
+
+      @if ((loaded.relatedCards ?? []).length > 0) {
+        <h2>Cartes liées</h2>
+        <ul class="related">
+          @for (related of loaded.relatedCards ?? []; track related.name) {
+            <li>{{ related.name }} <span class="quiet">{{ related.component }}</span></li>
+          }
+        </ul>
+      }
+
+      @if (rulings().length > 0) {
+        <h2>Rulings</h2>
+        <ul class="rulings">
+          @for (ruling of rulings(); track $index) {
+            <li [innerHTML]="ruling | oracleText"></li>
+          }
+        </ul>
+      }
+    </aside>
+  </article>
+} @else {
+  <p class="notice">Chargement…</p>
+}

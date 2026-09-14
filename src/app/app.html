@@ -1,0 +1,31 @@
+<a class="skip" href="#content">Aller au contenu</a>
+
+<header>
+  <a class="brand" routerLink="/">
+    <span class="brand-name">Scriptorium</span>
+    <span class="brand-line">Traduire les cartes Magic dans toutes les langues</span>
+  </a>
+
+  <div class="session">
+    @if (auth.user(); as user) {
+      @if (user.avatarUrl) {
+        <img class="avatar" [src]="user.avatarUrl" alt="" width="28" height="28">
+      }
+      <span>{{ user.displayName }}</span>
+      <button type="button" (click)="auth.logout()">Se déconnecter</button>
+    } @else {
+      <button type="button" (click)="auth.login('google')">Continuer avec Google</button>
+      <button type="button" (click)="auth.login('github')">Continuer avec GitHub</button>
+    }
+  </div>
+</header>
+
+<div class="layout">
+  @if (language.available().length > 0) {
+    <app-language-rail class="rail-slot" [languages]="language.available()" [selected]="language.selected()" (selectedChange)="language.select($event)" />
+  }
+
+  <main id="content" [attr.dir]="language.direction()">
+    <router-outlet />
+  </main>
+</div>

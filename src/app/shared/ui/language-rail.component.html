@@ -1,0 +1,12 @@
+<nav class="rail" [attr.aria-label]="label()">
+  <ul role="tablist" aria-orientation="vertical">
+    @for (code of languages(); track code; let i = $index) {
+      <li role="none">
+        <button #entry role="tab" [id]="'lang-' + code" [attr.aria-selected]="code === selected()" [tabindex]="code === selected() ? 0 : -1" [class.is-selected]="code === selected()" (click)="selected.set(code)" (keydown)="onKeydown($event, i)">
+          <span class="name" [attr.lang]="code">{{ name(code) }}</span>
+          <span class="code" aria-hidden="true">({{ code }})</span>
+        </button>
+      </li>
+    }
+  </ul>
+</nav>

@@ -4,14 +4,8 @@ import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth-callback',
-  template: `
-    @if (error()) {
-      <p class="auth-error">La connexion a échoué. <a routerLink="/">Revenir à l'accueil</a></p>
-    } @else {
-      <p>Connexion en cours…</p>
-    }
-  `,
-  styles: `.auth-error { padding: 2rem; }`,
+  templateUrl: './auth-callback.component.html',
+  styleUrl: './auth-callback.component.css',
 })
 export class AuthCallbackComponent {
   private readonly auth = inject(AuthService);
