@@ -42,7 +42,8 @@ export class CardViewComponent {
   readonly rulings = computed(() => {
     const loaded = this.card();
     const all = loaded?.rulings ?? [];
-    if (all.length === 0) return [];
+    if (all.length === 0)
+      return [];
 
     const language = this.language.selected();
     const localized = all.filter(r => r.code === language);

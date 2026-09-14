@@ -1,6 +1,17 @@
-.spike { max-inline-size: 40rem; }
-label { display: block; margin-block: var(--space-4) var(--space-1); }
-input, textarea { inline-size: 100%; }
+.spike {
+  max-inline-size: 40rem;
+}
+
+label {
+  display: block;
+  margin-block: var(--space-4) var(--space-1);
+}
+
+input,
+textarea {
+  inline-size: 100%;
+}
+
 pre {
   margin-block-start: var(--space-4);
   padding: var(--space-3);
