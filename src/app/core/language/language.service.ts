@@ -1,6 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
 
-/** Codes de langue tels que Scryfall les emploie, avec leur nom natif. */
 export const LANGUAGE_NAMES: Record<string, string> = {
   en: 'English',
   es: 'Español',
@@ -21,6 +20,12 @@ export const LANGUAGE_NAMES: Record<string, string> = {
   ph: 'Phyrexian',
 };
 
+export interface LanguageEntry {
+  code: string;
+  name: string;
+  translated: boolean;
+}
+
 export function languageName(code: string): string {
   return LANGUAGE_NAMES[code] ?? code;
 }
@@ -35,7 +40,6 @@ const STORAGE_KEY = 'scriptorium.language';
 
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
-  /** Langues dans lesquelles la carte affichée existe. */
   private readonly _available = signal<string[]>([]);
   private readonly _selected = signal<string>(this.initial());
 
@@ -45,12 +49,30 @@ export class LanguageService {
 
   readonly isEditable = computed(() => this._selected() !== 'en');
 
+  readonly entries = computed<LanguageEntry[]>(() => {
+    const available = this._available();
+
+    if (available.length === 0) {
+      return [];
+    }
+
+    const done = available
+      .map(code => ({ code, name: languageName(code), translated: true }))
+      .sort(byName);
+
+    const todo = Object.keys(LANGUAGE_NAMES)
+      .filter(code => !available.includes(code))
+      .map(code => ({ code, name: languageName(code), translated: false }))
+      .sort(byName);
+
+    return [...done, ...todo];
+  });
+
+  readonly translatedCount = computed(() => this._available().length);
+  readonly totalCount = computed(() => Object.keys(LANGUAGE_NAMES).length);
+
   setAvailable(languages: string[]): void {
     this._available.set(languages);
-
-    if (languages.length > 0 && !languages.includes(this._selected())) {
-      this.select(languages.includes('en') ? 'en' : languages[0]);
-    }
   }
 
   select(code: string): void {
@@ -60,23 +82,24 @@ export class LanguageService {
 
   private initial(): string {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored && LANGUAGE_NAMES[stored]) {
+    if (stored && LANGUAGE_NAMES[stored])
       return stored;
-    }
 
     for (const tag of navigator.languages ?? []) {
       const base = tag.toLowerCase();
 
-      if (base.startsWith('zh')) {
+      if (base.startsWith('zh'))
         return base.includes('hant') || base.includes('tw') || base.includes('hk') ? 'zht' : 'zhs';
-      }
 
       const short = base.split('-')[0];
-      if (LANGUAGE_NAMES[short]) {
+      if (LANGUAGE_NAMES[short])
         return short;
-      }
     }
 
     return 'en';
   }
+}
+
+function byName(a: LanguageEntry, b: LanguageEntry): number {
+  return a.name.localeCompare(b.name);
 }

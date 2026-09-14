@@ -2,12 +2,24 @@
   background: var(--ink-soft);
   border-inline-end: 1px solid var(--ink-line);
   block-size: 100%;
+  overflow-y: auto;
 }
 
 ul {
   margin: 0;
   padding: var(--space-2) 0;
   list-style: none;
+}
+
+.group {
+  margin-block: var(--space-4) var(--space-1);
+  padding: 0 var(--space-3);
+  font-size: var(--size-xs);
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  color: var(--text-on-ink-quiet);
+  border-block-start: 1px solid var(--ink-line);
+  padding-block-start: var(--space-3);
 }
 
 button {
@@ -34,6 +46,16 @@ button:hover {
   color: var(--text-on-ink);
   border-inline-start-color: var(--brass);
   background: color-mix(in srgb, var(--brass) 18%, transparent);
+}
+
+/* Une langue absente reste lisible mais s'efface : c'est une invitation,
+   pas une entrée équivalente aux traductions existantes. */
+.is-empty .name {
+  opacity: 0.55;
+}
+
+.is-empty.is-selected .name {
+  opacity: 1;
 }
 
 .name {
@@ -63,8 +85,13 @@ button:hover {
     padding: 0;
   }
 
+  .group {
+    display: none;
+  }
+
   button {
     inline-size: auto;
+    flex-wrap: nowrap;
     border-inline-start: 0;
     border-block-end: 3px solid transparent;
   }

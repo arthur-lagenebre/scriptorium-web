@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, ElementRef, input, model, viewChildren } from '@angular/core';
-import { languageName } from '../../core/language/language.service';
+import { ChangeDetectionStrategy, Component, ElementRef, computed, input, model, viewChildren } from '@angular/core';
+import { LanguageEntry } from '../../core/language/language.service';
 
 @Component({
   selector: 'app-language-rail',
@@ -8,17 +8,21 @@ import { languageName } from '../../core/language/language.service';
   styleUrl: './language-rail.component.scss',
 })
 export class LanguageRailComponent {
-  readonly languages = input.required<string[]>();
+  readonly entries = input.required<LanguageEntry[]>();
   readonly selected = model.required<string>();
-  readonly label = input('Langues disponibles');
+  readonly label = input('Langues');
 
-  private readonly entries = viewChildren<ElementRef<HTMLButtonElement>>('entry');
+  private readonly buttons = viewChildren<ElementRef<HTMLButtonElement>>('entry');
 
-  protected readonly name = languageName;
+  /** Rang de la première langue non traduite, où insérer le titre de groupe. */
+  readonly firstTodo = computed(() => {
+    const index = this.entries().findIndex(entry => !entry.translated);
+    return index === -1 ? -1 : index;
+  });
 
   onKeydown(event: KeyboardEvent, index: number): void {
-    const codes = this.languages();
-    const last = codes.length - 1;
+    const list = this.entries();
+    const last = list.length - 1;
 
     let target: number | null = null;
 
@@ -42,7 +46,7 @@ export class LanguageRailComponent {
     }
 
     event.preventDefault();
-    this.selected.set(codes[target]);
-    this.entries()[target]?.nativeElement.focus();
+    this.selected.set(list[target].code);
+    this.buttons()[target]?.nativeElement.focus();
   }
 }
