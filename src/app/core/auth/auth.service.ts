@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { firstValueFrom } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
 
 export interface UserRole {
   role: string;
@@ -64,8 +65,10 @@ export class AuthService {
         this.http.get<CurrentUser>(`${environment.apiBaseUrl}/api/auth/me`)
       );
       this._user.set(user);
-    } catch {
-      this.logout();
+    } catch (error) {
+      if (error instanceof HttpErrorResponse && error.status === 401) {
+        this.logout();
+      }
     }
   }
 }
