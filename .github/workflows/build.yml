@@ -1,0 +1,33 @@
+name: build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # Vitest est le lanceur par defaut depuis Angular 21 : aucun navigateur
+      # n'est necessaire. A retablir des qu'un premier .spec.ts existe —
+      # ng test echoue actuellement faute de fichier a executer.
+      # - name: Test
+      #   run: npm test
