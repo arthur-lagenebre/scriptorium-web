@@ -146,7 +146,7 @@ export class CardApi {
   private readonly http = inject(HttpClient);
   private readonly base = `${environment.apiBaseUrl}/api`;
 
-  private readonly useFixture = true;
+  private readonly useFixture = false;
 
   private fixture?: Promise<CardTutor[]>;
 

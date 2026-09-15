@@ -27,14 +27,16 @@ export class SearchComponent implements OnDestroy {
 
     clearTimeout(this.timer);
 
-    if (value.trim().length === 0) {
+    const term = value.trim();
+
+    if (term.length < 3) {
       this.results.set([]);
       this.loading.set(false);
       return;
     }
 
     this.loading.set(true);
-    this.timer = setTimeout(() => void this.run(value.trim()), 300);
+    this.timer = setTimeout(() => void this.run(term), 300);
   }
 
   private async run(term: string): Promise<void> {

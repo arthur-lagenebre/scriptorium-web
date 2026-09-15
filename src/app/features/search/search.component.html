@@ -1,31 +1,33 @@
 <section class="search">
   <label for="q">Chercher une carte</label>
-  <input id="q" type="search" autocomplete="off" placeholder="Nom anglais de la carte" [value]="query()" (input)="onInput($event)">
+  <input id="q" type="search" autocomplete="off" placeholder="Nom anglais de la carte" [value]="query()"
+    (input)="onInput($event)">
   <p class="hint">La recherche porte sur le nom anglais, qui sert de pivot entre les langues.</p>
 
   @if (loading()) {
-    <p class="notice">Recherche…</p>
+  <p class="notice">Recherche…</p>
   } @else if (error()) {
-    <p class="notice">La recherche a échoué. Vérifiez que l'API répond.</p>
+  <p class="notice">La recherche a échoué. Vérifiez que l'API répond.</p>
   } @else if (query().length > 0 && results().length === 0) {
-    <p class="notice">Aucune carte ne correspond à « {{ query() }} ».</p>
+  <p class="notice">Aucune carte ne correspond à « {{ query() }} ».</p>
   } @else if (results().length > 0) {
-    <ul class="results">
-      @for (card of results(); track card.id) {
-        <li>
-          <a [routerLink]="['/card', card.id]">
-            <span class="name">{{ name(card) }}</span>
-            <span class="typeline">{{ typeline(card) }}</span>
-            <span class="languages">
-              @for (code of card.languages; track code) {
-                <span class="tag" [title]="fullName(code)">{{ code }}</span>
-              }
-            </span>
-          </a>
-        </li>
-      }
-    </ul>
-  } @else {
-    <p class="notice">Tapez quelques lettres pour commencer.</p>
-  }
+  <ul class="results">
+    @for (card of results(); track card.id) {
+    <li>
+      <a [routerLink]="['/card', card.id]">
+        <span class="name">{{ name(card) }}</span>
+        <span class="typeline">{{ typeline(card) }}</span>
+        <span class="languages">
+          @for (code of card.languages; track code) {
+          <span class="tag" [title]="fullName(code)">{{ code }}</span>
+          }
+        </span>
+      </a>
+    </li>
+    }
+  </ul>
+  } @else if (query().trim().length > 0 && query().trim().length < 3) { <p class="notice">Encore quelques lettres…</p>
+    } @else {
+    <p class="notice">Tapez au moins trois lettres pour commencer.</p>
+    }
 </section>
